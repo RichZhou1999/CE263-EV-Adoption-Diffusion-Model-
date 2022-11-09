@@ -2,6 +2,7 @@ import numpy as np
 from typing import List, Set, Dict, Tuple, Optional, Callable
 from NodeUtils import generate_income_with_prob_value_list
 import pandas as pd
+import os
 import copy
 import math
 '''
@@ -24,7 +25,7 @@ class NodeCreator:
     def __init__(self):
         self._nodes: list[set[int, dict]] = []
 
-    def generate_nodes(self, number: int, attribute_dict: dict[str, callable], **kwargs):
+    def generate_nodes(self, number: int, attribute_dict, **kwargs):
         for i in range(len(self.nodes), len(self.nodes) + number):
             node_id = i
             node_attribute = {}
@@ -37,7 +38,8 @@ class NodeCreator:
             self._nodes.append((node_id, node_attribute))
 
     def generate_nodes_from_population_income_csv(self, csv_path, attribute_dict,  number_of_simulation_nodes=100000):
-        data = pd.read_csv("%s.csv" % csv_path)
+        # data = pd.read_csv("%s.csv" % csv_path)
+        data = pd.read_csv(csv_path)
         population_sum = sum(data['Population'])
         scale = number_of_simulation_nodes / population_sum
         print("model agents number: ", number_of_simulation_nodes)
@@ -54,7 +56,7 @@ class NodeCreator:
             self.generate_nodes(number, temp_attribute_dict, prob_list=prob_list, value_list=value_list)
 
     @property
-    def nodes(self) -> list[set[int, dict]]:
+    def nodes(self):
         return self._nodes
 
 
@@ -68,9 +70,10 @@ if __name__ == "__main__":
     }
 
     nodeCreateor = NodeCreator()
-    nodeCreateor.generate_nodes_from_population_income_csv(csv_path='.././Data/BEV_data', attribute_dict=attribute_dict)
+    # nodeCreateor.generate_nodes_from_population_income_csv(csv_path='.././Data/BEV_data', attribute_dict=attribute_dict)
+    nodeCreateor.generate_nodes_from_population_income_csv(csv_path=os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'Data', 'BEV_data.csv')), attribute_dict=attribute_dict)
 
     G.add_nodes_from(nodeCreateor.nodes)
-    print(G.nodes)
+    # print(G.nodes)
     print("node_1000:", G.nodes[1000])
     print("node_5000:", G.nodes[5000])
