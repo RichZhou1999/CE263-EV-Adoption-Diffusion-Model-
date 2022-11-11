@@ -1,11 +1,15 @@
-import networkit
+import networkit as nk
 import pandas as pd
 import typing
 import numpy as np
 import math
 import copy
-from NetworkUtils import generate_income_with_prob_value_list
+from NetworkUtils import *
 import os
+import itertools as it
+from tqdm import tqdm
+import matplotlib.pyplot as plt
+np.random.seed(0)
 
 '''
 Create network with the package of Networkit:
@@ -21,6 +25,7 @@ Node:
     node_id ranges from 0 to the number of designed nodes number, eg:100000
 Link:
     ----------------------------------------------------------------
+
 '''
 
 
@@ -34,6 +39,7 @@ class NetworkCreatorNetworkit:
         self.node_attribute_dict = node_attribute_dict
         self.designed_node_number = designed_node_number
         self.scale = None
+        self.edge_list = []
 
     def set_scale_value(self, true_value, model_value):
         self.scale = model_value/true_value
@@ -50,7 +56,7 @@ class NetworkCreatorNetworkit:
                 self.node_attributes_attachment[key][node_id] = value
         self.current_node_number += number
 
-    def generate_nodes_from_population_income_csv(self, csv_path,):
+    def generate_nodes_from_population_income_csv(self, csv_path):
         # data = pd.read_csv("%s.csv" % csv_path)
         data = pd.read_csv(csv_path)
         population_sum = sum(data['Population'])
@@ -68,9 +74,86 @@ class NetworkCreatorNetworkit:
             temp_attribute_dict.update({"zip code": int(item['zip code'])})
             self.generate_nodes(number, temp_attribute_dict, prob_list=prob_list, value_list=value_list)
 
+    def generate_edge_list(self, path: str, path_M: str) -> None:
+        """
+        generate edges based on node's inter-zipcode distance
+
+        Parameters:
+            path (str): path to wa_zipcode_coord.csv
+            path_M (str): path to M numpy array
+        """
+        print()
+        print("========================")
+
+        if os.path.isfile(
+            os.path.join(os.path.dirname(__file__), '..', 'Data/edge_list.npy')
+        ):  
+            print('Data/edge_list.npy found...')
+            self.edge_list = np.load(os.path.join(os.path.dirname(__file__), '..', 'Data/edge_list.npy'))
+            print("DONE!")
+            return
+
+        node_list = list(range(self.G.numberOfNodes()))
+        edge_comb = list(it.combinations(node_list, 2))
+        wa_zipcode_coord = pd.read_csv(path)
+        M = np.load(path_M)
+        zipcode_idx_dict = wa_zipcode_coord.reset_index().set_index('Zip')['index'].to_dict()
+
+        print('generating edge list...')
+        def node_comb_filter(node_tuple: tuple) -> bool:
+
+            node_start = node_tuple[0]
+            node_end = node_tuple[1]
+
+            # zipcode
+            zipcode_start = int(self.node_attributes_attachment['zip code'][node_start])
+            zipcode_end = int(self.node_attributes_attachment['zip code'][node_end])
+
+            # zipcode idx
+            idx_start = zipcode_idx_dict[zipcode_start]
+            idx_end = zipcode_idx_dict[zipcode_end]
+
+            r = M[idx_start][idx_end]
+            p = np.random.random(1)[0]
+            p_connect = link_connect_prob(r)
+
+            return p < p_connect
+
+        self.edge_list = list(filter(node_comb_filter, edge_comb))
+
+        print(f"possible node combination = {len(edge_comb)}")
+        print(f"number of link combination = {len(self.edge_list)}, \
+            making up {len(self.edge_list) / len(edge_comb) * 100}% of all combination")
+
+        print('saving edge list to npy..')
+        np.save(os.path.join(os.path.dirname(__file__), '..', 'Data/edge_list.npy'), np.array(self.edge_list))
+        print("DONE!")
+
+    def generate_edges(self) -> None:
+        """
+        adding edges to networkit graph
+        """
+
+        print()
+        print('generating edges...')
+
+        for row in tqdm(self.edge_list):
+            source = row[0]
+            target = row[1]
+            self.G.addEdge(source, target)
+        
+        print("DONE!")
 
 if __name__ == "__main__":
-    empty_graph = networkit.graph.Graph(weighted=False, directed=False)
+
+    WA_ZIPCODE_COORDINATES_PATH = os.path.join(
+        os.path.dirname(__file__), '..', 'Data', 'wa_zipcode_coordinates.csv'
+    )
+    M_PATH = os.path.join(
+        os.path.dirname(__file__), '..', 'Data', 'M.npy'
+    )
+
+    empty_graph = nk.graph.Graph(weighted=False, directed=False)
     attribute_dict = {
         "income": generate_income_with_prob_value_list,
         "adoption": 0,
@@ -83,4 +166,12 @@ if __name__ == "__main__":
     print("income for node 3000:",graph.node_attributes_attachment['income'][3000])
     print("adoption for node 3000:", graph.node_attributes_attachment['adoption'][3000])
 
+    graph.generate_edge_list(WA_ZIPCODE_COORDINATES_PATH, M_PATH)
+    graph.generate_edges()
 
+    # plot the graph and save figure
+    nk.viztasks.drawGraph(graph.G)
+    plt.savefig(os.path.join(os.path.dirname(__file__), '..', 'G.png'), dpi=300, bbox_inches='tight')
+
+    print(f"number of nodes = {graph.G.numberOfNodes()}")
+    print(f"number of edges = {graph.G.numberOfEdges()}")
