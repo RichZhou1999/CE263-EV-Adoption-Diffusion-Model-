@@ -170,8 +170,8 @@ if __name__ == "__main__":
     graph.generate_edges()
 
     # plot the graph and save figure
-    nk.viztasks.drawGraph(graph.G)
-    plt.savefig(os.path.join(os.path.dirname(__file__), '..', 'G.png'), dpi=300, bbox_inches='tight')
+    # nk.viztasks.drawGraph(graph.G)
+    # plt.savefig(os.path.join(os.path.dirname(__file__), '..', 'G.png'), dpi=300, bbox_inches='tight')
 
     print(f"number of nodes = {graph.G.numberOfNodes()}")
     print(f"number of edges = {graph.G.numberOfEdges()}")
