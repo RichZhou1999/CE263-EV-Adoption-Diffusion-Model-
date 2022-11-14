@@ -7,7 +7,6 @@ import numpy as np
 import math
 import copy
 import NetworkComponent.NetworkUtils as NetworkUtils
-# from NetworkUtils import *
 import os
 import itertools as it
 from tqdm import tqdm
@@ -29,6 +28,7 @@ Node:
 Link:
     ----------------------------------------------------------------
 
+If running to issue with module not found, try running this script in its directory
 '''
 
 
@@ -44,7 +44,7 @@ class NetworkCreatorNetworkit(nk.graph.Graph):
         self.edge_list = []
         self.node_attribute_dict = {}
 
-    def generate_node_attribute_attachment(self, node_attribute_dict,attribute_type_dict):
+    def generate_node_attribute_attachment(self, node_attribute_dict, attribute_type_dict):
         self.node_attribute_dict = node_attribute_dict
         for key in node_attribute_dict:
             self.node_attributes_attachment[key] = self.attachNodeAttribute(key, attribute_type_dict[key])
@@ -69,8 +69,8 @@ class NetworkCreatorNetworkit(nk.graph.Graph):
         data = pd.read_csv(csv_path)
         population_sum = sum(data['Population'])
         self.set_scale_value(population_sum, self.designed_node_number)
-        print("model agents number: ", self.designed_node_number)
-        print("data agents number: ", population_sum)
+        print("model agents number:", self.designed_node_number)
+        print("data agents number:", population_sum)
         print("scale:", self.scale)
         for i in range(len(data)):
             item = data.iloc[i]
@@ -80,7 +80,7 @@ class NetworkCreatorNetworkit(nk.graph.Graph):
             value_list = np.array(value_list)/max(value_list)
             prob_list = list(item["<10,000":">200,000"]/100)
             temp_attribute_dict = copy.copy(self.node_attribute_dict)
-            temp_attribute_dict.update({"zip code": int(item['zip code'])})
+            temp_attribute_dict.update({"zipcode": int(item['zip code'])})
             self.generate_nodes(number, temp_attribute_dict, prob_list=prob_list, value_list=value_list)
 
     def generate_edge_list(self, path: str, path_M: str) -> None:
@@ -100,9 +100,10 @@ class NetworkCreatorNetworkit(nk.graph.Graph):
             print('Data/edge_list.npy found...')
             self.edge_list = np.load(os.path.join(os.path.dirname(__file__), '..', 'Data/edge_list.npy'))
             print("DONE!")
+            print()
             return
 
-        node_list = list(range(self.G.numberOfNodes()))
+        node_list = list(range(self.current_node_number))
         edge_comb = list(it.combinations(node_list, 2))
         wa_zipcode_coord = pd.read_csv(path)
         M = np.load(path_M)
@@ -113,11 +114,9 @@ class NetworkCreatorNetworkit(nk.graph.Graph):
 
             node_start = node_tuple[0]
             node_end = node_tuple[1]
-
             # zipcode
-            zipcode_start = int(self.node_attributes_attachment['zip code'][node_start])
-            zipcode_end = int(self.node_attributes_attachment['zip code'][node_end])
-
+            zipcode_start = int(self.node_attributes_attachment['zipcode'][node_start])
+            zipcode_end = int(self.node_attributes_attachment['zipcode'][node_end])
             # zipcode idx
             idx_start = zipcode_idx_dict[zipcode_start]
             idx_end = zipcode_idx_dict[zipcode_end]
@@ -137,6 +136,7 @@ class NetworkCreatorNetworkit(nk.graph.Graph):
         print('saving edge list to npy..')
         np.save(os.path.join(os.path.dirname(__file__), '..', 'Data/edge_list.npy'), np.array(self.edge_list))
         print("DONE!")
+        print()
 
     def generate_edges(self) -> None:
         """
@@ -152,6 +152,20 @@ class NetworkCreatorNetworkit(nk.graph.Graph):
             self.addEdge(source, target)
         
         print("DONE!")
+    
+    def set_node_degree(self):
+        
+        for node in self.iterNodes():
+            self.node_attributes_attachment['degree'][node] = self.degree(node)
+    
+    def update_num_neighbor_adopted(self):
+
+        for node in self.iterNodes():
+            num_neighbor_adopted = 0
+            for neighbor in self.iterNeighbors(node):
+                if self.node_attributes_attachment['adoption'][neighbor] == 1 and node != neighbor:
+                    num_neighbor_adopted += 1
+            self.node_attributes_attachment['num_neighbor_adopted'][node] = num_neighbor_adopted
 
 if __name__ == "__main__":
 
@@ -166,34 +180,38 @@ if __name__ == "__main__":
     attribute_dict = {
         "income": NetworkUtils.generate_income_with_prob_value_list,
         "adoption": 0,
-        "zip code": 0,
+        "zipcode": 0,
+        "degree": 0,
+        "num_neighbor_adopted": 0
     }
-    attribute_type_dict ={"income": float,
-                          "adoption": int,
-                          "zip code": int,}
-    # graph = NetworkCreatorNetworkit(1)
-    graph = NetworkCreatorNetworkit(10000)
-    graph.generate_node_attribute_attachment(attribute_dict, attribute_type_dict)
+    attribute_type_dict = {
+        "income": float,
+        "adoption": int,
+        "zipcode": int,
+        "degree": int,
+        "num_neighbor_adopted": int,
+    }
+
+    # network initialization
+    G = NetworkCreatorNetworkit(25000)
+    G.generate_node_attribute_attachment(attribute_dict, attribute_type_dict)
     csv_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'Data', 'BEV_data.csv'))
-    graph.generate_nodes_from_population_income_csv(csv_path=csv_path)
-    print("zip code for node 3000:", graph.node_attributes_attachment['zip code'][3000])
-    print("income for node 3000:", graph.node_attributes_attachment['income'][3000])
-    print("adoption for node 3000:", graph.node_attributes_attachment['adoption'][3000])
-    #
-    graph.generate_edge_list(WA_ZIPCODE_COORDINATES_PATH, M_PATH)
-    graph.generate_edges()
+    G.generate_nodes_from_population_income_csv(csv_path=csv_path)
+    G.generate_edge_list(WA_ZIPCODE_COORDINATES_PATH, M_PATH)
+    G.generate_edges()
+    G.set_node_degree()
+
+    print("zip code for node 3000:", G.node_attributes_attachment['zipcode'][3000])
+    print("income for node 3000:", G.node_attributes_attachment['income'][3000])
+    print("adoption for node 3000:", G.node_attributes_attachment['adoption'][3000])
+    print("degree for node 3000:", G.node_attributes_attachment['degree'][3000])
+
+    print(f"number of nodes = {G.numberOfNodes()}")
+    print(f"number of edges = {G.numberOfEdges()}")
 
     # plot the graph and save figure
-    # nk.viztasks.drawGraph(graph.G)
+    # nk.viztasks.drawGraph(G)
     # plt.savefig(os.path.join(os.path.dirname(__file__), '..', 'G.png'), dpi=300, bbox_inches='tight')
-
-    print(f"number of nodes = {graph.numberOfNodes()}")
-    print(f"number of edges = {graph.numberOfEdges()}")
-
-
-
-
-
 
 
     # class NetworkCreatorNetworkit(nk.graph.Graph):
