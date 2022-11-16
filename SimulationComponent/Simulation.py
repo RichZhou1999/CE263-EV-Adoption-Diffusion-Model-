@@ -104,9 +104,9 @@ if __name__ == "__main__":
     print(f"number of nodes = {G.numberOfNodes()}")
     print(f"number of edges = {G.numberOfEdges()}")
 
-    simulation_paras = {"income_coeff": 1e-3,
-                        "neighbor_adoption_coeff": 4e-4}
+    simulation_paras = {"income_coeff": 2e-5,
+                        "neighbor_adoption_coeff": 8e-6}
     
-    simulation = Simulation(G, 500, simulation_paras)
+    simulation = Simulation(G, 600, simulation_paras)
     simulation.run()
     simulation.show_adoption_history()
