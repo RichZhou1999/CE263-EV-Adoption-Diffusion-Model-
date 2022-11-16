@@ -36,8 +36,7 @@ class Simulation:
     def step(self):
         self.transition()
         # updates number of adopted neighbors of each node
-        self.G.update_num_neighbor_adopted()
-
+        # self.G.update_num_neighbor_adopted()
     def transition(self):
         for node_id in range(self.G.current_node_number):
 
@@ -49,6 +48,8 @@ class Simulation:
             if p > adopt_thr and self.G.node_attributes_attachment['adoption'][node_id] == 0:
                 self.G.node_attributes_attachment['adoption'][node_id] = 1
                 self.current_adoption_number += 1
+                for neighbor in self.G.iterNeighbors(node_id):
+                    self.G.node_attributes_attachment['num_neighbor_adopted'][neighbor] += 1
 
         self.adoption_history_list.append(self.current_adoption_number)
 
