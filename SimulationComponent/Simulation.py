@@ -7,6 +7,7 @@ sys.path.append("..")
 from NetworkComponent.NetworkUtils import *
 from NetworkComponent.NetworkCreatorNetworkit import *
 import matplotlib.pyplot as plt
+import pickle
 
 
 class Simulation:
@@ -127,30 +128,33 @@ if __name__ == "__main__":
 
     # simulation_paras = {"income_coeff": 9.5e-6,
     #                     "neighbor_adoption_coeff": 7.75e-3}
-    simulation_paras = {"income_coeff": 9.75e-6,
-                        "neighbor_adoption_coeff": 7.75e-3}
+    with open("best_coeff.pkl","rb") as f:
+        best_coeff = pickle.load(f)
+        # print(best_coeff)
+    # simulation_paras = {"income_coeff": 9.959e-6,
+    #                     "neighbor_adoption_coeff": 0.0076}
     #
-    simulation = Simulation(G, 700, simulation_paras)
-    simulation.run()
+    # simulation = Simulation(G, 690, simulation_paras)
+    # simulation.run()
     path = os.path.join(
         os.path.dirname(__file__), '..', 'Data', 'wa_pev_weekly_reg.csv'
     )
-    print("absolute error", simulation.calculate_absolute_error(path))
-    # simulation.show_adoption_history(path)
-
-
-
-    # G = NetworkCreatorNetworkit(25000)
-    # G.generate_node_attribute_attachment(attribute_dict, attribute_type_dict)
-    # csv_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'Data', 'BEV_data.csv'))
-    # G.generate_nodes_from_population_income_csv(csv_path=csv_path)
-    # G.generate_edge_list(WA_ZIPCODE_COORDINATES_PATH, M_PATH)
-    # G.generate_edges()
-    # G.set_node_degree()
-    #
-    # simulation_paras = {"income_coeff": 9.75e-6,
-    #                     "neighbor_adoption_coeff": 7.75e-3}
-    # simulation = Simulation(G, 700, simulation_paras)
-    # simulation.run()
     # print("absolute error", simulation.calculate_absolute_error(path))
     # simulation.show_adoption_history(path)
+
+
+
+    G = NetworkCreatorNetworkit(25000)
+    G.generate_node_attribute_attachment(attribute_dict, attribute_type_dict)
+    csv_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'Data', 'BEV_data.csv'))
+    G.generate_nodes_from_population_income_csv(csv_path=csv_path)
+    G.generate_edge_list(WA_ZIPCODE_COORDINATES_PATH, M_PATH)
+    G.generate_edges()
+    G.set_node_degree()
+
+    simulation_paras = {"income_coeff": 9.75e-6,
+                        "neighbor_adoption_coeff": 7.75e-3}
+    simulation = Simulation(G, 700, simulation_paras)
+    simulation.run()
+    print("absolute error", simulation.calculate_absolute_error(path))
+    simulation.show_adoption_history(path)

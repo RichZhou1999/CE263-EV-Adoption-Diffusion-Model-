@@ -1,11 +1,11 @@
 import os
+import sys
+sys.path.append("..")
 from SimulationComponent.Simulation import Simulation
 import networkx as nx
 import numpy as np
 import os
 import networkit as nk
-import sys
-sys.path.append("..")
 from NetworkComponent.NetworkUtils import *
 from NetworkComponent.NetworkCreatorNetworkit import *
 import matplotlib.pyplot as plt
@@ -59,9 +59,9 @@ def experiment(income_coeff, neighbor_adoption_coeff ):
     print("absolute error", absolute_error)
     return absolute_error
 
-possible_income_coeff = np.linspace(9.5, 10, 50)*1e-6
-possible_neighbor_adoption_coeff = np.linspace(7.6, 7.9, 50)*1e-3
-for i in range(1000):
+possible_income_coeff = np.linspace(9.83, 9.85, 50)*1e-6
+possible_neighbor_adoption_coeff = np.linspace(7.76, 7.78, 50)*1e-3
+for i in range(100):
     income_coeff = random.choice(possible_income_coeff)
     neighbor_adoption_coeff = random.choice(possible_neighbor_adoption_coeff)
     absolute_error = experiment(income_coeff, neighbor_adoption_coeff)
@@ -85,9 +85,9 @@ for i in range(1000):
             print("get better coeff")
 
 
-with open("best_coeff.pkl","rb") as f:
-    a = pickle.load(f)
-    print(a)
+# with open("best_coeff.pkl","rb") as f:
+#     a = pickle.load(f)
+#     print(a)
 # with open("best_coeff", "wb") as f:
 #     pickle.dump(a, f)
 #
