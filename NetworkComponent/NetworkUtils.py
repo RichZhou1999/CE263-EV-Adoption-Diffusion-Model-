@@ -90,8 +90,11 @@ def link_connect_prob(r: float) -> float:
     Returns: 
         p (float): probability
     """
-
     assert r >= 0, 'r needs to be positive'
-    p = r**-1.2 + 5e-6
+
+    if r == 0:
+        p = 1
+    else:
+        p = r**-1.2 + 5e-6
 
     return p

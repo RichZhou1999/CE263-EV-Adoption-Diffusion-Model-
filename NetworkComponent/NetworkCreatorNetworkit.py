@@ -3,6 +3,7 @@ sys.path.append("..")
 import networkit as nk
 import pandas as pd
 import typing
+import time
 import numpy as np
 import math
 import copy
@@ -209,6 +210,7 @@ if __name__ == "__main__":
     }
 
     # network initialization
+    start_time = time.time()
     G = NetworkCreatorNetworkit(30000)
     G.generate_node_attribute_attachment(attribute_dict, attribute_type_dict)
     csv_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'Data', 'BEV_data.csv'))
@@ -216,7 +218,9 @@ if __name__ == "__main__":
     G.generate_edge_list(WA_ZIPCODE_COORDINATES_PATH, M_PATH)
     G.generate_edges()
     G.set_node_degree()
+    
 
+    print("--- %s seconds for initialization ---" % (round(time.time() - start_time)))
     print("zip code for node 3000:", G.node_attributes_attachment['zipcode'][3000])
     print("income for node 3000:", G.node_attributes_attachment['income'][3000])
     print("adoption for node 3000:", G.node_attributes_attachment['adoption'][3000])
