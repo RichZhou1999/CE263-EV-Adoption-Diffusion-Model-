@@ -154,9 +154,9 @@ class NetworkCreatorNetworkit(nk.graph.Graph):
         print("DONE!")
     
     def set_node_degree(self):
-        
         for node in self.iterNodes():
             self.node_attributes_attachment['degree'][node] = self.degree(node)
+        self.get_max_degree()
     
     def update_num_neighbor_adopted(self):
 
@@ -166,6 +166,18 @@ class NetworkCreatorNetworkit(nk.graph.Graph):
                 if self.node_attributes_attachment['adoption'][neighbor] == 1 and node != neighbor:
                     num_neighbor_adopted += 1
             self.node_attributes_attachment['num_neighbor_adopted'][node] = num_neighbor_adopted
+
+    def get_max_degree(self):
+        max_degree = 0
+        for node in self.iterNodes():
+            max_degree = max(max_degree, self.degree(node))
+        self.max_degree = max_degree
+        return max_degree
+
+    def reset(self):
+        for node in self.iterNodes():
+            self.node_attributes_attachment["adoption"][node] = 0
+            self.node_attributes_attachment['num_neighbor_adopted'][node] = 0
 
 if __name__ == "__main__":
 
