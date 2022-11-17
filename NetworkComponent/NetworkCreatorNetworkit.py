@@ -104,12 +104,16 @@ class NetworkCreatorNetworkit(nk.graph.Graph):
             return
 
         node_list = list(range(self.current_node_number))
-        edge_comb = list(it.combinations(node_list, 2))
+        # edge_comb = list(it.combinations(node_list, 2))
+        edge_comb_gen = it.combinations(node_list, 2)
         wa_zipcode_coord = pd.read_csv(path)
         M = np.load(path_M)
         zipcode_idx_dict = wa_zipcode_coord.reset_index().set_index('Zip')['index'].to_dict()
 
         print('generating edge list...')
+        # print(f"possible node combination = {sum(1 for x in edge_comb_gen)}")
+        print()
+
         def node_comb_filter(node_tuple: tuple) -> bool:
 
             node_start = node_tuple[0]
@@ -127,11 +131,11 @@ class NetworkCreatorNetworkit(nk.graph.Graph):
 
             return p < p_connect
 
-        self.edge_list = list(filter(node_comb_filter, edge_comb))
+        self.edge_list = list(filter(node_comb_filter, edge_comb_gen))
 
-        print(f"possible node combination = {len(edge_comb)}")
-        print(f"number of link combination = {len(self.edge_list)}, \
-            making up {len(self.edge_list) / len(edge_comb) * 100}% of all combination")
+        # print(f"number of link combination = {len(self.edge_list)}, \
+        #     making up {len(self.edge_list) / sum(1 for x in edge_comb_gen) * 100}% of all combination")
+
 
         print('saving edge list to npy..')
         np.save(os.path.join(os.path.dirname(__file__), '..', 'Data/edge_list.npy'), np.array(self.edge_list))
@@ -205,7 +209,7 @@ if __name__ == "__main__":
     }
 
     # network initialization
-    G = NetworkCreatorNetworkit(25000)
+    G = NetworkCreatorNetworkit(30000)
     G.generate_node_attribute_attachment(attribute_dict, attribute_type_dict)
     csv_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'Data', 'BEV_data.csv'))
     G.generate_nodes_from_population_income_csv(csv_path=csv_path)
