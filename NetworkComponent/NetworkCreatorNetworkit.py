@@ -221,6 +221,7 @@ if __name__ == "__main__":
     
 
     print("--- %s seconds for initialization ---" % (round(time.time() - start_time)))
+    print()
     print("zip code for node 3000:", G.node_attributes_attachment['zipcode'][3000])
     print("income for node 3000:", G.node_attributes_attachment['income'][3000])
     print("adoption for node 3000:", G.node_attributes_attachment['adoption'][3000])
