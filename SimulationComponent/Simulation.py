@@ -54,16 +54,32 @@ class Simulation:
         self.adoption_history_list.append(self.current_adoption_number)
 
     def show_adoption_history(self, empirical_csv_path):
-        plt.figure()
+        fig = plt.figure()
         y = np.array(self.adoption_history_list) / self.G.scale
         x = range(len(self.adoption_history_list))
-        plt.plot(x, y, label='model curve')
+        plt.plot(x, y, label='model curve', linestyle='--')
         empirical_data = pd.read_csv(empirical_csv_path)
         empirical_data = empirical_data['cum_reg']
         empirical_data_time_range = range(len(empirical_data))
-        plt.plot(empirical_data_time_range, empirical_data, label='empirical curve')
-        plt.xlabel('Step')
+        plt.plot(empirical_data_time_range, empirical_data, label='empirical curve', linestyle="solid")
+        p = np.polyfit(range(len(empirical_data)), np.log(empirical_data), 1)
+        a = np.exp(p[1])
+        b = p[0]
+        x_fitted = np.linspace(0, len(empirical_data), 100)
+        y_fitted = a * np.exp(b * x_fitted)
+        plt.plot(x_fitted, y_fitted, label='baseline exponential curve',linestyle="-.")
+        plt.xlabel('Time')
         plt.ylabel("Adoption Number")
+
+        x_label_position = [0, 104, 208, 312, 416, 520, 624]
+        labels = [2011, 2013, 2015, 2017, 2019, 2021, 2022]
+        plt.grid(False)
+        plt.xticks(x_label_position, labels)
+        # locs, labels = plt.xticks()
+        # for label in labels:
+        #     label.set_visible(False)
+        # for label in labels[0::10]:
+        #     label.set_visible(True)
         plt.legend()
         plt.show()
 
@@ -110,26 +126,26 @@ if __name__ == "__main__":
     }
 
     # network initialization
-    G = NetworkCreatorNetworkit(25000)
-    G.generate_node_attribute_attachment(attribute_dict, attribute_type_dict)
-    csv_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'Data', 'BEV_data.csv'))
-    G.generate_nodes_from_population_income_csv(csv_path=csv_path)
-    G.generate_edge_list(WA_ZIPCODE_COORDINATES_PATH, M_PATH)
-    G.generate_edges()
-    G.set_node_degree()
-
-    print("zip code for node 3000:", G.node_attributes_attachment['zipcode'][3000])
-    print("income for node 3000:", G.node_attributes_attachment['income'][3000])
-    print("adoption for node 3000:", G.node_attributes_attachment['adoption'][3000])
-    print("degree for node 3000:", G.node_attributes_attachment['degree'][3000])
-
-    print(f"number of nodes = {G.numberOfNodes()}")
-    print(f"number of edges = {G.numberOfEdges()}")
+    # G = NetworkCreatorNetworkit(30000)
+    # G.generate_node_attribute_attachment(attribute_dict, attribute_type_dict)
+    # csv_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'Data', 'BEV_data.csv'))
+    # G.generate_nodes_from_population_income_csv(csv_path=csv_path)
+    # G.generate_edge_list(WA_ZIPCODE_COORDINATES_PATH, M_PATH)
+    # G.generate_edges()
+    # G.set_node_degree()
+    #
+    # print("zip code for node 3000:", G.node_attributes_attachment['zipcode'][3000])
+    # print("income for node 3000:", G.node_attributes_attachment['income'][3000])
+    # print("adoption for node 3000:", G.node_attributes_attachment['adoption'][3000])
+    # print("degree for node 3000:", G.node_attributes_attachment['degree'][3000])
+    #
+    # print(f"number of nodes = {G.numberOfNodes()}")
+    # print(f"number of edges = {G.numberOfEdges()}")
 
     # simulation_paras = {"income_coeff": 9.5e-6,
     #                     "neighbor_adoption_coeff": 7.75e-3}
-    with open("best_coeff.pkl","rb") as f:
-        best_coeff = pickle.load(f)
+    # with open("best_coeff.pkl","rb") as f:
+    #     best_coeff = pickle.load(f)
         # print(best_coeff)
     # simulation_paras = {"income_coeff": 9.959e-6,
     #                     "neighbor_adoption_coeff": 0.0076}
@@ -154,7 +170,7 @@ if __name__ == "__main__":
 
     simulation_paras = {"income_coeff": 9.75e-6,
                         "neighbor_adoption_coeff": 7.75e-3}
-    simulation = Simulation(G, 700, simulation_paras)
+    simulation = Simulation(G, 684, simulation_paras)
     simulation.run()
     print("absolute error", simulation.calculate_absolute_error(path))
     simulation.show_adoption_history(path)
