@@ -104,7 +104,7 @@ class Simulation:
         self.current_adoption_number = 0
         self.G.reset()
 
-    def plot_zipcode_adoption_curve(self, zipcode):
+    def plot_zipcode_adoption_curve(self, zipcode_list,city):
         # adoption_each_step_dict = {}
         # for node_id in range(self.G.current_node_number):
         #     if self.G.node_attributes_attachment['adoption'][node_id] == 1:
@@ -117,7 +117,7 @@ class Simulation:
         adoption_each_step = [0] * self.simulation_time_length
 
         for node_id in range(self.G.current_node_number):
-            if self.G.node_attributes_attachment['zipcode'][node_id] == zipcode and self.G.node_attributes_attachment['adoption'][node_id] == 1:
+            if (self.G.node_attributes_attachment['zipcode'][node_id] in zipcode_list) and self.G.node_attributes_attachment['adoption'][node_id] == 1:
                 adoption_each_step[self.G.node_attributes_attachment['adoption_time'][node_id]] += 1
         temp_sum = 0
         adoption_sum_list = []
@@ -132,7 +132,7 @@ class Simulation:
         plt.grid(False)
         plt.xticks(x_label_position, labels)
         plt.legend()
-        plt.title("adoption curve under %s"%zipcode)
+        plt.title("adoption curve under %s"%city)
         plt.show()
 
 
@@ -212,4 +212,11 @@ if __name__ == "__main__":
     simulation.run()
     print("absolute error", simulation.calculate_absolute_error(path))
     # simulation.show_adoption_history(path)
-    simulation.plot_zipcode_adoption_curve(98102)
+    ZIPCODE_COORDINATES = pd.read_csv(WA_ZIPCODE_COORDINATES_PATH)
+    city = "Tacoma"
+    print(ZIPCODE_COORDINATES['City'])
+    zipcode_list = ZIPCODE_COORDINATES[ZIPCODE_COORDINATES['City'] ==city]['Zip']
+    zipcode_list = list(zipcode_list)
+    print(zipcode_list)
+
+    simulation.plot_zipcode_adoption_curve(zipcode_list, city)
