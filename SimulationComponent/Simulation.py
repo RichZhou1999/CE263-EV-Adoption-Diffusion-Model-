@@ -29,6 +29,7 @@ class Simulation:
 
         for i in tqdm(range(self.simulation_time_length)):
             self.step()
+            self.current_simulation_time += 1
         
         print(self.adoption_history_list)
         print("DONE")
@@ -48,6 +49,7 @@ class Simulation:
 
             if p > adopt_thr and self.G.node_attributes_attachment['adoption'][node_id] == 0:
                 self.G.node_attributes_attachment['adoption'][node_id] = 1
+                self.G.node_attributes_attachment["adoption_time"][node_id] = self.current_simulation_time
                 self.current_adoption_number += 1
                 for neighbor in self.G.iterNeighbors(node_id):
                     self.G.node_attributes_attachment['num_neighbor_adopted'][neighbor] += 1
@@ -92,6 +94,8 @@ class Simulation:
         error = 0
         for i in range(min_length):
             error += abs(empirical_data[i] - model_data[i])
+            if i == min_length - 1:
+                print(abs(empirical_data[i] - model_data[i]))
         return error
 
     def reset(self):
@@ -99,6 +103,38 @@ class Simulation:
         self.current_simulation_time = 0
         self.current_adoption_number = 0
         self.G.reset()
+
+    def plot_zipcode_adoption_curve(self, zipcode):
+        # adoption_each_step_dict = {}
+        # for node_id in range(self.G.current_node_number):
+        #     if self.G.node_attributes_attachment['adoption'][node_id] == 1:
+        #         if self.G.node_attributes_attachment['zipcode'][node_id] in adoption_each_step_dict:
+        #             adoption_each_step_dict[self.G.node_attributes_attachment['zipcode'][node_id]][self.G.node_attributes_attachment['adoption_time'][node_id]] += 1
+        #         else:
+        #             adoption_each_step_dict[self.G.node_attributes_attachment['zipcode']] = [0] * self.simulation_time_length
+        #             adoption_each_step_dict[self.G.node_attributes_attachment['zipcode'][node_id]][self.G.node_attributes_attachment['adoption_time'][node_id]] += 1
+
+        adoption_each_step = [0] * self.simulation_time_length
+
+        for node_id in range(self.G.current_node_number):
+            if self.G.node_attributes_attachment['zipcode'][node_id] == zipcode and self.G.node_attributes_attachment['adoption'][node_id] == 1:
+                adoption_each_step[self.G.node_attributes_attachment['adoption_time'][node_id]] += 1
+        temp_sum = 0
+        adoption_sum_list = []
+        for i in range(self.simulation_time_length):
+            temp_sum += adoption_each_step[i]
+            adoption_sum_list.append(temp_sum)
+        y = np.array(adoption_sum_list)/ self.G.scale
+        x = range(len(adoption_sum_list))
+        plt.plot(x, y, label='model curve', linestyle='--')
+        x_label_position = [0, 104, 208, 312, 416, 520, 624]
+        labels = [2011, 2013, 2015, 2017, 2019, 2021, 2022]
+        plt.grid(False)
+        plt.xticks(x_label_position, labels)
+        plt.legend()
+        plt.title("adoption curve under %s"%zipcode)
+        plt.show()
+
 
 if __name__ == "__main__":
 
@@ -115,7 +151,8 @@ if __name__ == "__main__":
         "adoption": 0,
         "zipcode": 0,
         "degree": 0,
-        "num_neighbor_adopted": 0
+        "num_neighbor_adopted": 0,
+        "adoption_time": -1
     }
     attribute_type_dict ={
         "income": float,
@@ -123,6 +160,7 @@ if __name__ == "__main__":
         "zipcode": int,
         "degree": int,
         "num_neighbor_adopted": int,
+        "adoption_time": int
     }
 
     # network initialization
@@ -160,7 +198,7 @@ if __name__ == "__main__":
 
 
 
-    G = NetworkCreatorNetworkit(25000)
+    G = NetworkCreatorNetworkit(30000)
     G.generate_node_attribute_attachment(attribute_dict, attribute_type_dict)
     csv_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'Data', 'BEV_data.csv'))
     G.generate_nodes_from_population_income_csv(csv_path=csv_path)
@@ -168,9 +206,10 @@ if __name__ == "__main__":
     G.generate_edges()
     G.set_node_degree()
 
-    simulation_paras = {"income_coeff": 9.75e-6,
-                        "neighbor_adoption_coeff": 7.75e-3}
+    simulation_paras = {"income_coeff": 9.32e-6,
+                        "neighbor_adoption_coeff": 7.15e-3}
     simulation = Simulation(G, 684, simulation_paras)
     simulation.run()
     print("absolute error", simulation.calculate_absolute_error(path))
-    simulation.show_adoption_history(path)
+    # simulation.show_adoption_history(path)
+    simulation.plot_zipcode_adoption_curve(98102)
