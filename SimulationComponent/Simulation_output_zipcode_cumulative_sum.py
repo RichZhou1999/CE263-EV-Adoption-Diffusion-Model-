@@ -137,6 +137,29 @@ class Simulation:
         plt.title("adoption curve under %s"%city)
         plt.show()
 
+    def output_weekly_cumulative_adoption(self):
+        adoption_each_step = [0] * self.simulation_time_length
+
+        for node_id in range(self.G.current_node_number):
+            if self.G.node_attributes_attachment['adoption'][node_id] == 1:
+                adoption_each_step[self.G.node_attributes_attachment['adoption_time'][node_id]] += 1
+        temp_sum = 0
+        adoption_sum_list = []
+        for i in range(self.simulation_time_length):
+            temp_sum += adoption_each_step[i]
+            adoption_sum_list.append(temp_sum)
+        adoption_each_step = np.array(adoption_each_step)
+        adoption_sum_list = np.array(adoption_sum_list)
+        week_list = [i for i in range(self.simulation_time_length)]
+        d_each = {'week': week_list, 'number': (adoption_each_step/self.G.scale).astype(int)}
+        d_sum = {'week': week_list, 'number': (adoption_sum_list/self.G.scale).astype(int)}
+
+        each_dataframe = pd.DataFrame(data=d_each)
+        sum_dataframe = pd.DataFrame(data=d_sum)
+        each_dataframe.to_csv("../Results/weekly_adoption_5_percent.csv" )
+        sum_dataframe.to_csv("../Results/sum_adoption_5_percent.csv" )
+
+
     def output_heatmap(self):
         week_list = []
         zipcode_list = []
@@ -221,9 +244,11 @@ if __name__ == "__main__":
         simulation_paras = {"income_coeff": 9.32e-6,
                             "neighbor_adoption_coeff": 7.15e-3}
 
-        simulation_time_length = 684
+        simulation_time_length = 1000
         simulation = Simulation(G, simulation_time_length, simulation_paras)
         simulation.run()
-        print("absolute error", simulation.calculate_absolute_error(path))
+        simulation.output_weekly_cumulative_adoption()
+        # simulation.show_adoption_history(path)
+        # print("absolute error", simulation.calculate_absolute_error(path))
         # simulation.output_cumulative_sum_by_zipcode(simulation_time_length)
-        simulation.output_heatmap()
+        # simulation.output_heatmap()
