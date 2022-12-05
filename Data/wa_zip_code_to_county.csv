@@ -1,0 +1,734 @@
+zip,primary_city,acceptable_cities,state,county,latitude,longitude,irs_estimated_population
+98001,Auburn,"Algona, Federal Way",WA,King County,47.3,-122.26,33760
+98002,Auburn,,WA,King County,47.31,-122.22,32510
+98003,Federal Way,Auburn,WA,King County,47.3,-122.31,43710
+98004,Bellevue,"Beaux Arts, Clyde Hill, Hunts Point, Yarrow Point",WA,King County,47.61,-122.21,33340
+98005,Bellevue,,WA,King County,47.62,-122.16,19190
+98006,Bellevue,,WA,King County,47.55,-122.14,39810
+98007,Bellevue,,WA,King County,47.62,-122.14,25550
+98008,Bellevue,,WA,King County,47.6,-122.11,25070
+98009,Bellevue,,WA,King County,47.61,-122.2,1399
+98010,Black Diamond,,WA,King County,47.32,-121.99,6190
+98011,Bothell,,WA,King County,47.74,-122.2,24640
+98012,Bothell,Mill Creek,WA,Snohomish County,47.84,-122.19,69490
+98013,Burton,Vashon,WA,King County,47.38,-122.45,380
+98014,Carnation,,WA,King County,47.64,-121.89,7260
+98015,Bellevue,,WA,King County,47.61,-122.2,886
+98019,Duvall,,WA,King County,47.73,-121.93,12300
+98020,Edmonds,Woodway,WA,Snohomish County,47.8,-122.37,19670
+98021,Bothell,,WA,Snohomish County,47.79,-122.2,32480
+98022,Enumclaw,,WA,King County,47.1,-121.6,21910
+98023,Federal Way,Auburn,WA,King County,47.3,-122.37,47140
+98024,Fall City,,WA,King County,47.58,-121.88,5200
+98025,Hobart,,WA,King County,47.43,-121.89,644
+98026,Edmonds,,WA,Snohomish County,47.84,-122.33,35590
+98027,Issaquah,,WA,King County,47.5,-122,28320
+98028,Kenmore,Bothell,WA,King County,47.75,-122.24,22610
+98029,Issaquah,Sammamish,WA,King County,47.55,-122,29160
+98030,Kent,,WA,King County,47.36,-122.19,34470
+98031,Kent,,WA,King County,47.4,-122.19,39930
+98032,Kent,,WA,King County,47.39,-122.26,33070
+98033,Kirkland,Redmond,WA,King County,47.67,-122.18,38470
+98034,Kirkland,,WA,King County,47.72,-122.2,46350
+98035,Kent,,WA,King County,47.38,-122.19,884
+98036,Lynnwood,Brier,WA,Snohomish County,47.8,-122.28,37780
+98037,Lynnwood,,WA,Snohomish County,47.84,-122.29,26370
+98038,Maple Valley,,WA,King County,47.4,-121.99,36270
+98039,Medina,,WA,King County,47.62,-122.23,3070
+98040,Mercer Island,,WA,King County,47.56,-122.22,25510
+98041,Bothell,,WA,King County,47.75,-122.21,1101
+98042,Kent,Covington,WA,King County,47.36,-122.1,47570
+98043,Mountlake Terrace,Mountlake Ter,WA,Snohomish County,47.79,-122.3,18880
+98045,North Bend,,WA,King County,47.39,-121.61,15700
+98046,Lynnwood,,WA,Snohomish County,47.83,-122.3,1459
+98047,Pacific,Auburn,WA,King County,47.26,-122.25,6480
+98050,Preston,,WA,King County,47.55,-121.94,597
+98051,Ravensdale,,WA,King County,47.34,-121.92,3860
+98052,Redmond,,WA,King County,47.68,-122.12,69780
+98053,Redmond,,WA,King County,47.66,-122.01,22190
+98054,Redondo,,WA,King County,47.34,-122.32,161
+98055,Renton,,WA,King County,47.46,-122.21,21380
+98056,Renton,Newcastle,WA,King County,47.51,-122.18,32820
+98057,Renton,,WA,King County,47.47,-122.22,11740
+98058,Renton,,WA,King County,47.43,-122.11,41100
+98059,Renton,Newcastle,WA,King County,47.49,-122.1,39070
+98061,Rollingbay,,WA,Kitsap County,47.65,-122.55,322
+98062,Seahurst,Burien,WA,King County,47.46,-122.36,482
+98063,Federal Way,Auburn,WA,King County,47.3,-122.31,1064
+98064,Kent,,WA,King County,47.39,-122.23,1064
+98065,Snoqualmie,,WA,King County,47.53,-121.8,15960
+98068,Snoqualmie Pass,Snoqualmie Ps,WA,Kittitas County,47.42,-121.37,236
+98070,Vashon,,WA,King County,47.42,-122.45,10150
+98071,Auburn,,WA,King County,47.25,-122.11,1338
+98072,Woodinville,,WA,King County,47.75,-122.09,25080
+98073,Redmond,,WA,King County,47.67,-122.11,1169
+98074,Sammamish,Redmond,WA,King County,47.62,-122.02,30750
+98075,Sammamish,Issaquah,WA,King County,47.58,-122.03,26000
+98077,Woodinville,,WA,King County,47.75,-122.04,13430
+98082,Mill Creek,Bothell,WA,,47.85,-122.22,1402
+98083,Kirkland,,WA,King County,47.68,-122.19,1060
+98087,Lynnwood,,WA,Snohomish County,47.85,-122.28,35800
+98089,Kent,,WA,King County,47.38,-122.23,556
+98092,Auburn,,WA,King County,47.28,-122.1,46970
+98093,Federal Way,Auburn,WA,King County,47.3,-122.35,1902
+98101,Seattle,,WA,King County,47.61,-122.33,12000
+98102,Seattle,,WA,King County,47.63,-122.32,20640
+98103,Seattle,,WA,King County,47.67,-122.34,45170
+98104,Seattle,,WA,King County,47.6,-122.32,9930
+98105,Seattle,,WA,King County,47.66,-122.29,25690
+98106,Seattle,,WA,King County,47.54,-122.35,22580
+98107,Seattle,,WA,King County,47.67,-122.38,24450
+98108,Seattle,Tukwila,WA,King County,47.54,-122.31,22480
+98109,Seattle,,WA,King County,47.63,-122.34,26280
+98110,Bainbridge Island,"Bainbridge Is, Seattle",WA,Kitsap County,47.64,-122.53,24050
+98111,Seattle,,WA,King County,47.61,-122.33,1613
+98112,Seattle,,WA,King County,47.63,-122.29,20160
+98113,Seattle,,WA,King County,47.61,-122.33,244
+98114,Seattle,,WA,King County,47.58,-122.31,383
+98115,Seattle,,WA,King County,47.68,-122.28,49290
+98116,Seattle,,WA,King County,47.57,-122.4,25310
+98117,Seattle,,WA,King County,47.68,-122.38,33220
+98118,Seattle,,WA,King County,47.54,-122.27,44280
+98119,Seattle,,WA,King County,47.63,-122.37,20320
+98121,Seattle,,WA,King County,47.62,-122.35,15100
+98122,Seattle,,WA,King County,47.61,-122.3,31210
+98124,Seattle,,WA,King County,47.57,-122.33,1410
+98125,Seattle,,WA,King County,47.71,-122.3,35970
+98126,Seattle,,WA,King County,47.55,-122.37,20510
+98127,Seattle,,WA,King County,47.61,-122.33,702
+98129,Seattle,,WA,King County,47.61,-122.33,0
+98131,Seattle,,WA,King County,47.46,-122.29,0
+98132,Seattle,,WA,King County,47.46,-122.29,0
+98133,Seattle,Shoreline,WA,King County,47.73,-122.34,42350
+98134,Seattle,,WA,King County,47.57,-122.33,640
+98136,Seattle,,WA,King County,47.53,-122.39,15140
+98138,Seattle,Tukwila,WA,King County,47.47,-122.26,627
+98139,Seattle,,WA,King County,47.61,-122.33,370
+98141,Seattle,,WA,King County,47.61,-122.33,66
+98144,Seattle,,WA,King County,47.58,-122.3,26650
+98145,Seattle,,WA,King County,47.65,-122.31,782
+98146,Seattle,Burien,WA,King County,47.49,-122.36,25840
+98148,Seattle,"Burien, Des Moines, Normandy Park, Seatac",WA,King County,47.44,-122.32,10020
+98151,Seattle,Goodwill Games 1990,WA,King County,47.6,-122.33,0
+98154,Seattle,,WA,King County,47.61,-122.33,33
+98155,Seattle,"Lake Forest Park, Lk Forest Pk, Shoreline",WA,King County,47.75,-122.29,32860
+98158,Seattle,Seatac,WA,King County,47.44,-122.31,0
+98160,Seattle,,WA,King County,47.77,-122.38,93
+98161,Seattle,,WA,King County,47.6,-122.33,0
+98164,Seattle,,WA,King County,47.61,-122.33,140
+98165,Seattle,,WA,King County,47.61,-122.33,651
+98166,Seattle,"Burien, Normandy Park",WA,King County,47.44,-122.35,20380
+98168,Seattle,"Burien, Seatac, Tukwila",WA,King County,47.48,-122.29,33620
+98170,Seattle,,WA,King County,47.61,-122.33,0
+98171,Seattle,,WA,King County,47.6,-122.33,0
+98174,Seattle,,WA,King County,47.6,-122.34,0
+98175,Seattle,,WA,King County,47.61,-122.33,395
+98177,Seattle,Shoreline,WA,King County,47.73,-122.37,19940
+98178,Seattle,Tukwila,WA,King County,47.49,-122.25,24260
+98181,Seattle,,WA,King County,47.61,-122.33,0
+98184,Seattle,,WA,King County,47.6,-122.33,0
+98185,Seattle,,WA,King County,47.66,-122.29,0
+98188,Seattle,"Seatac, Tukwila",WA,King County,47.44,-122.28,24360
+98189,Seattle,,WA,,47.42,-122.25,0
+98190,Seattle,,WA,King County,47.5,-122.29,0
+98191,Seattle,,WA,King County,47.61,-122.33,0
+98194,Seattle,,WA,King County,47.61,-122.33,299
+98195,Seattle,,WA,King County,47.65,-122.31,192
+98198,Seattle,"Des Moines, Normandy Park, Seatac",WA,King County,47.38,-122.31,34610
+98199,Seattle,,WA,King County,47.65,-122.4,20960
+98201,Everett,,WA,Snohomish County,47.98,-122.2,23720
+98203,Everett,,WA,Snohomish County,47.94,-122.24,33000
+98204,Everett,,WA,Snohomish County,47.89,-122.25,37360
+98205,Everett,,WA,Snohomish County,47.99,-122.15,14630
+98206,Everett,,WA,Snohomish County,47.92,-122.22,1935
+98207,Everett,,WA,Snohomish County,47.99,-122.22,99
+98208,Everett,,WA,Snohomish County,47.9,-122.18,55520
+98213,Everett,,WA,Snohomish County,47.97,-122.2,1020
+98220,Acme,,WA,Whatcom County,48.7,-122.19,600
+98221,Anacortes,"Decatur Is, Decatur Island",WA,Skagit County,48.46,-122.6,21810
+98222,Blakely Island,"Anacortes, Blakely Is",WA,San Juan County,48.56,-122.8,20
+98223,Arlington,,WA,Snohomish County,48.18,-121.67,41760
+98224,Baring,,WA,King County,47.73,-121.49,163
+98225,Bellingham,,WA,Whatcom County,48.73,-122.48,32250
+98226,Bellingham,,WA,Whatcom County,48.79,-122.41,41000
+98227,Bellingham,,WA,Whatcom County,48.8,-122.4,2107
+98228,Bellingham,,WA,Whatcom County,48.74,-122.46,1966
+98229,Bellingham,,WA,Whatcom County,48.68,-122.41,28940
+98230,Blaine,,WA,Whatcom County,48.93,-122.72,16950
+98231,Blaine,,WA,Whatcom County,48.99,-122.74,1547
+98232,Bow,,WA,Skagit County,48.56,-122.44,3860
+98233,Burlington,,WA,Skagit County,48.53,-122.31,15240
+98235,Clearlake,,WA,Skagit County,48.46,-122.23,616
+98236,Clinton,,WA,Island County,47.95,-122.41,5540
+98237,Concrete,,WA,Skagit County,48.56,-121.77,3390
+98238,Conway,,WA,Skagit County,48.34,-122.34,358
+98239,Coupeville,,WA,Island County,48.18,-122.66,6840
+98240,Custer,,WA,Whatcom County,48.94,-122.62,3060
+98241,Darrington,,WA,Snohomish County,48.19,-121.21,2090
+98243,Deer Harbor,,WA,San Juan County,48.62,-123.01,380
+98244,Deming,,WA,Whatcom County,48.8,-122.06,2510
+98245,Eastsound,,WA,San Juan County,48.62,-122.87,3780
+98247,Everson,,WA,Whatcom County,48.9,-122.3,8520
+98248,Ferndale,,WA,Whatcom County,48.86,-122.63,25450
+98249,Freeland,,WA,Island County,48.01,-122.54,5210
+98250,Friday Harbor,Roche Harbor,WA,San Juan County,48.53,-123.06,8070
+98251,Gold Bar,,WA,Snohomish County,47.86,-121.66,4540
+98252,Granite Falls,,WA,Snohomish County,48.05,-121.74,10070
+98253,Greenbank,,WA,Island County,48.09,-122.57,1740
+98255,Hamilton,,WA,Skagit County,48.52,-121.99,234
+98256,Index,,WA,Snohomish County,47.84,-121.43,266
+98257,La Conner,,WA,Skagit County,48.41,-122.53,4050
+98258,Lake Stevens,,WA,Snohomish County,48.04,-122.05,49530
+98259,North Lakewood,N Lakewood,WA,Snohomish County,48.16,-122.3,269
+98260,Langley,,WA,Island County,48.04,-122.44,5380
+98261,Lopez Island,,WA,San Juan County,48.49,-122.87,2370
+98262,Lummi Island,,WA,Whatcom County,48.69,-122.66,790
+98263,Lyman,,WA,Skagit County,48.52,-122.07,415
+98264,Lynden,,WA,Whatcom County,48.95,-122.43,22260
+98266,Maple Falls,,WA,Whatcom County,48.96,-122.12,3420
+98267,Marblemount,,WA,Skagit County,48.44,-121.27,390
+98270,Marysville,,WA,Snohomish County,48.05,-122.14,48870
+98271,Marysville,"Quil Ceda Village, Quil Ceda Vlg, Tulalip",WA,Snohomish County,48.09,-122.24,28810
+98272,Monroe,,WA,Snohomish County,47.87,-121.88,27650
+98273,Mount Vernon,,WA,Skagit County,48.42,-122.42,29100
+98274,Mount Vernon,,WA,Skagit County,48.36,-121.98,17190
+98275,Mukilteo,,WA,Snohomish County,47.91,-122.3,21470
+98276,Nooksack,Everson,WA,Whatcom County,48.93,-122.33,1420
+98277,Oak Harbor,,WA,Island County,48.32,-122.63,37600
+98278,Oak Harbor,"Nas Whidbey, Whidbey Island Naval Air",WA,Island County,48.34,-122.67,996
+98279,Olga,,WA,San Juan County,48.63,-122.8,520
+98280,Orcas,,WA,San Juan County,48.61,-122.88,386
+98281,Point Roberts,,WA,Whatcom County,48.98,-123.05,1160
+98282,Camano Island,Stanwood,WA,Island County,48.16,-122.49,15910
+98283,Rockport,,WA,Skagit County,48.8,-121.26,320
+98284,Sedro Woolley,,WA,Skagit County,48.59,-122.13,23710
+98286,Shaw Island,,WA,San Juan County,48.57,-122.96,222
+98287,Silvana,,WA,Snohomish County,48.19,-122.25,441
+98288,Skykomish,,WA,King County,47.64,-121.33,307
+98290,Snohomish,,WA,Snohomish County,47.94,-122,34490
+98291,Snohomish,,WA,Snohomish County,47.92,-122.09,1923
+98292,Stanwood,,WA,Snohomish County,48.21,-122.28,23220
+98293,Startup,,WA,Snohomish County,47.86,-121.74,394
+98294,Sultan,,WA,Snohomish County,47.85,-121.74,7010
+98295,Sumas,,WA,Whatcom County,48.94,-122.23,2640
+98296,Snohomish,,WA,Snohomish County,47.85,-122.09,26600
+98297,Waldron,,WA,San Juan County,48.69,-123.03,65
+98303,Anderson Island,Anderson Is,WA,Pierce County,47.15,-122.7,1110
+98304,Ashford,,WA,Pierce County,46.88,-121.74,650
+98305,Beaver,,WA,Clallam County,48.06,-124.44,340
+98310,Bremerton,,WA,Kitsap County,47.59,-122.62,17750
+98311,Bremerton,,WA,Kitsap County,47.63,-122.63,24360
+98312,Bremerton,,WA,Kitsap County,47.57,-122.75,28560
+98314,Bremerton,,WA,Kitsap County,47.55,-122.64,34
+98315,Silverdale,,WA,Kitsap County,47.72,-122.71,3630
+98320,Brinnon,,WA,Jefferson County,47.69,-122.99,1060
+98321,Buckley,,WA,Pierce County,47.13,-122.04,16120
+98322,Burley,,WA,Kitsap County,47.41,-122.63,950
+98323,Carbonado,,WA,Pierce County,47.01,-121.98,820
+98324,Carlsborg,,WA,Clallam County,48.1,-123.17,790
+98325,Chimacum,,WA,Jefferson County,47.97,-122.78,2030
+98326,Clallam Bay,,WA,Clallam County,48.17,-124.53,430
+98327,Dupont,,WA,Pierce County,47.09,-122.64,9690
+98328,Eatonville,,WA,Pierce County,46.86,-122.25,10030
+98329,Gig Harbor,Wauna,WA,Pierce County,47.37,-122.71,8750
+98330,Elbe,,WA,Pierce County,46.76,-122.16,270
+98331,Forks,,WA,Clallam County,47.79,-124.26,4640
+98332,Gig Harbor,,WA,Pierce County,47.36,-122.6,17940
+98333,Fox Island,,WA,Pierce County,47.24,-122.63,4130
+98335,Gig Harbor,,WA,Pierce County,47.29,-122.62,27640
+98336,Glenoma,,WA,Lewis County,46.53,-122.14,850
+98337,Bremerton,Gorst,WA,Kitsap County,47.57,-122.63,5650
+98338,Graham,,WA,Pierce County,47.01,-122.29,27720
+98339,Port Hadlock,,WA,Jefferson County,48,-122.74,3460
+98340,Hansville,,WA,Kitsap County,47.91,-122.57,2570
+98342,Indianola,,WA,Kitsap County,47.75,-122.53,1530
+98343,Joyce,,WA,Clallam County,48.13,-123.73,233
+98344,Kapowsin,,WA,Pierce County,46.98,-122.22,544
+98345,Keyport,,WA,Kitsap County,47.7,-122.62,1112
+98346,Kingston,,WA,Kitsap County,47.81,-122.53,9730
+98348,La Grande,,WA,Thurston County,46.82,-122.27,0
+98349,Lakebay,Home,WA,Pierce County,47.28,-122.77,4360
+98350,La Push,,WA,Clallam County,47.9,-124.61,296
+98351,Longbranch,Lakebay,WA,Pierce County,47.2,-122.76,870
+98352,Sumner,,WA,Pierce County,47.16,-122.24,0
+98353,Manchester,,WA,Kitsap County,47.54,-122.49,1031
+98354,Milton,,WA,Pierce County,47.25,-122.31,8390
+98355,Mineral,,WA,Lewis County,46.71,-122.11,440
+98356,Morton,,WA,Lewis County,46.57,-122.33,1970
+98357,Neah Bay,,WA,Clallam County,48.33,-124.63,1102
+98358,Nordland,,WA,Jefferson County,48.06,-122.71,840
+98359,Olalla,,WA,Kitsap County,47.43,-122.57,5110
+98360,Orting,,WA,Pierce County,47.04,-122.14,14750
+98361,Packwood,,WA,Lewis County,46.56,-121.55,860
+98362,Port Angeles,,WA,Clallam County,47.99,-123.25,21090
+98363,Port Angeles,,WA,Clallam County,48.02,-123.82,11060
+98364,Port Gamble,,WA,Kitsap County,47.85,-122.59,237
+98365,Port Ludlow,Port Hadlock,WA,Jefferson County,47.89,-122.7,4650
+98366,Port Orchard,"S Park Vlg, South Park Village",WA,Kitsap County,47.54,-122.58,31840
+98367,Port Orchard,,WA,Kitsap County,47.46,-122.65,27400
+98368,Port Townsend,,WA,Jefferson County,48.03,-122.84,14530
+98370,Poulsbo,,WA,Kitsap County,47.75,-122.61,29880
+98371,Puyallup,Edgewood,WA,Pierce County,47.19,-122.33,22860
+98372,Puyallup,Edgewood,WA,Pierce County,47.22,-122.27,23410
+98373,Puyallup,South Hill,WA,Pierce County,47.14,-122.32,27110
+98374,Puyallup,South Hill,WA,Pierce County,47.12,-122.25,42390
+98375,Puyallup,South Hill,WA,Pierce County,47.1,-122.32,31000
+98376,Quilcene,,WA,Jefferson County,47.82,-122.84,1860
+98377,Randle,,WA,Lewis County,46.47,-121.82,1450
+98378,Retsil,,WA,Kitsap County,47.54,-122.61,27
+98380,Seabeck,,WA,Kitsap County,47.58,-122.9,5240
+98381,Sekiu,,WA,Clallam County,48.29,-124.4,250
+98382,Sequim,,WA,Clallam County,48.06,-123.06,27110
+98383,Silverdale,,WA,Kitsap County,47.67,-122.72,21350
+98384,South Colby,,WA,Kitsap County,47.52,-122.53,1032
+98385,South Prairie,,WA,Pierce County,47.14,-122.09,1156
+98386,Southworth,,WA,Kitsap County,47.51,-122.49,467
+98387,Spanaway,Bethel,WA,Pierce County,47.05,-122.36,49240
+98388,Steilacoom,,WA,Pierce County,47.21,-122.68,6370
+98390,Sumner,,WA,Pierce County,47.21,-122.23,11790
+98391,Bonney Lake,"Lake Tapps, Sumner",WA,Pierce County,47.18,-122.16,53670
+98392,Suquamish,,WA,Kitsap County,47.72,-122.56,2840
+98393,Tracyton,,WA,Kitsap County,47.62,-122.65,1117
+98394,Vaughn,,WA,Pierce County,47.31,-122.77,1880
+98395,Wauna,,WA,Pierce County,47.36,-122.69,1422
+98396,Wilkeson,,WA,Pierce County,47.1,-122.03,759
+98397,Longmire,,WA,Pierce County,46.75,-121.81,0
+98398,Paradise Inn,Paradise,WA,Lewis County,46.77,-121.74,0
+98401,Tacoma,,WA,Pierce County,47.25,-122.44,1160
+98402,Tacoma,,WA,Pierce County,47.26,-122.44,4290
+98403,Tacoma,,WA,Pierce County,47.27,-122.46,6880
+98404,Tacoma,,WA,Pierce County,47.2,-122.4,31320
+98405,Tacoma,,WA,Pierce County,47.24,-122.47,19150
+98406,Tacoma,,WA,Pierce County,47.26,-122.51,19400
+98407,Tacoma,Ruston,WA,Pierce County,47.29,-122.5,19770
+98408,Tacoma,,WA,Pierce County,47.19,-122.44,17810
+98409,Tacoma,Lakewood,WA,Pierce County,47.21,-122.47,23100
+98411,Tacoma,,WA,Pierce County,47.22,-122.47,1330
+98412,Tacoma,,WA,Pierce County,47.17,-122.44,198
+98413,Tacoma,,WA,Pierce County,47.2,-122.48,0
+98415,Tacoma,,WA,Pierce County,47.25,-122.45,197
+98416,Tacoma,,WA,Pierce County,47.26,-122.48,68
+98417,Tacoma,,WA,Pierce County,47.24,-122.43,554
+98418,Tacoma,,WA,Pierce County,47.22,-122.44,8860
+98419,Tacoma,,WA,Pierce County,47.19,-122.43,35
+98421,Tacoma,,WA,Pierce County,47.26,-122.39,190
+98422,Tacoma,,WA,Pierce County,47.28,-122.38,20270
+98424,Fife,Tacoma,WA,Pierce County,47.23,-122.36,11080
+98430,Camp Murray,Tacoma,WA,Pierce County,47.12,-122.57,0
+98431,Tacoma,"Joint Base Lewis Mcchord, Lewis Mcchord, Madigan Hosp, Madigan Hospital",WA,Pierce County,47.05,-122.55,151
+98433,Tacoma,"Fort Lewis, Ft Lewis, Joint Base Lewis Mcchord, Lewis Mcchord",WA,Pierce County,47.11,-122.59,14060
+98438,Mcchord AFB,"Joint Base Lewis Mcchord, Lewis Mcchord, Tacoma",WA,Pierce County,47.13,-122.5,610
+98439,Lakewood,"Joint Base Lewis Mcchord, Lewis Mcchord, Mcchord AFB, Tacoma",WA,Pierce County,47.12,-122.5,4430
+98442,Tacoma,,WA,Pierce County,47.14,-122.43,0
+98443,Tacoma,,WA,Pierce County,47.2,-122.37,5260
+98444,Tacoma,Parkland,WA,Pierce County,47.15,-122.44,30590
+98445,Tacoma,Parkland,WA,Pierce County,47.13,-122.4,30420
+98446,Tacoma,Parkland,WA,Pierce County,47.13,-122.37,11200
+98447,Tacoma,,WA,Pierce County,47.14,-122.44,67
+98448,Tacoma,Parkland,WA,Pierce County,47.25,-122.44,16
+98450,Tacoma,,WA,Pierce County,47.25,-122.44,0
+98455,Tacoma,,WA,Pierce County,47.25,-122.44,32
+98460,Tacoma,,WA,Pierce County,47.25,-122.44,0
+98464,Tacoma,"University Pl, University Place",WA,Pierce County,47.22,-122.53,918
+98465,Tacoma,,WA,Pierce County,47.25,-122.54,6180
+98466,Tacoma,"Fircrest, University Pl, University Place",WA,Pierce County,47.22,-122.54,26660
+98467,University Place,"Tacoma, University Pl",WA,Pierce County,47.2,-122.54,14740
+98471,Tacoma,,WA,Pierce County,47.25,-122.47,0
+98477,Tacoma,,WA,Pierce County,47.25,-122.44,0
+98481,Tacoma,,WA,Pierce County,47.22,-122.47,0
+98490,Tacoma,,WA,Pierce County,47.2,-122.48,90
+98492,Tacoma,Lakewood,WA,Pierce County,47.12,-122.55,0
+98493,Tacoma,,WA,Pierce County,47.05,-122.55,0
+98496,Lakewood,Tacoma,WA,Pierce County,47.17,-122.51,66
+98497,Lakewood,"Oakbrook, Tacoma",WA,Pierce County,47.18,-122.54,159
+98498,Lakewood,Tacoma,WA,Pierce County,47.15,-122.56,25940
+98499,Lakewood,"Joint Base Lewis Mcchord, Lewis Mcchord, Mcchord AFB, Tacoma",WA,Pierce County,47.16,-122.5,26630
+98501,Olympia,Tumwater,WA,Thurston County,46.97,-122.87,40220
+98502,Olympia,,WA,Thurston County,47.1,-123.06,29890
+98503,Lacey,Olympia,WA,Thurston County,47.02,-122.79,35200
+98504,Olympia,,WA,Thurston County,47.02,-122.87,75
+98505,Olympia,,WA,Thurston County,47.07,-122.98,96
+98506,Olympia,Lacey,WA,Thurston County,47.1,-122.86,16850
+98507,Olympia,,WA,Thurston County,47.03,-122.87,2975
+98508,Olympia,,WA,Thurston County,47.03,-122.94,1495
+98509,Lacey,Olympia,WA,Thurston County,47.03,-122.8,1899
+98511,Tumwater,Olympia,WA,Thurston County,46.95,-123.03,892
+98512,Olympia,Tumwater,WA,Thurston County,46.94,-123.04,27070
+98513,Olympia,Lacey,WA,Thurston County,46.98,-122.74,33420
+98516,Olympia,Lacey,WA,Thurston County,47.11,-122.76,27740
+98520,Aberdeen,,WA,Grays Harbor County,46.88,-123.99,17770
+98522,Adna,,WA,Lewis County,46.57,-123.29,312
+98524,Allyn,,WA,Mason County,47.37,-122.84,3810
+98526,Amanda Park,,WA,Grays Harbor County,47.47,-123.92,250
+98527,Bay Center,,WA,Pacific County,46.59,-123.92,217
+98528,Belfair,,WA,Mason County,47.43,-122.92,10330
+98530,Bucoda,,WA,Thurston County,46.79,-122.82,453
+98531,Centralia,,WA,Lewis County,46.74,-122.95,22700
+98532,Chehalis,Napavine,WA,Lewis County,46.62,-123,22110
+98533,Cinebar,,WA,Lewis County,46.59,-122.51,530
+98535,Copalis Beach,,WA,Grays Harbor County,47.09,-124.13,450
+98536,Copalis Crossing,Copalis Xing,WA,Grays Harbor County,47.16,-124.12,141
+98537,Cosmopolis,,WA,Grays Harbor County,46.85,-123.62,2050
+98538,Curtis,,WA,Lewis County,46.47,-123.08,390
+98539,Doty,,WA,Lewis County,46.63,-123.28,221
+98540,East Olympia,,WA,Thurston County,46.96,-122.82,691
+98541,Elma,,WA,Grays Harbor County,47.1,-123.39,8970
+98542,Ethel,,WA,Lewis County,46.53,-122.79,560
+98544,Galvin,,WA,Lewis County,46.74,-123.03,260
+98546,Grapeview,,WA,Mason County,47.32,-122.94,2540
+98547,Grayland,,WA,Grays Harbor County,46.79,-124.08,1000
+98548,Hoodsport,,WA,Mason County,47.42,-123.18,1910
+98550,Hoquiam,,WA,Grays Harbor County,47.11,-123.96,8680
+98552,Humptulips,,WA,Grays Harbor County,47.32,-123.91,280
+98554,Lebam,,WA,Pacific County,46.55,-123.54,155
+98555,Lilliwaup,,WA,Mason County,47.52,-123.06,480
+98556,Littlerock,,WA,Thurston County,46.9,-123.02,496
+98557,Mccleary,,WA,Grays Harbor County,47.03,-123.27,3240
+98558,Mckenna,,WA,Pierce County,46.93,-122.56,1627
+98559,Malone,,WA,Grays Harbor County,46.96,-123.33,101
+98560,Matlock,,WA,Mason County,47.3,-123.43,270
+98561,Menlo,,WA,Pacific County,46.62,-123.64,196
+98562,Moclips,,WA,Grays Harbor County,47.24,-124.2,179
+98563,Montesano,,WA,Grays Harbor County,47.17,-123.6,7450
+98564,Mossyrock,,WA,Lewis County,46.48,-122.44,2230
+98565,Napavine,,WA,Lewis County,46.58,-122.9,1635
+98566,Neilton,,WA,Grays Harbor County,47.41,-123.87,144
+98568,Oakville,,WA,Grays Harbor County,46.83,-123.28,2330
+98569,Ocean Shores,Ocean City,WA,Grays Harbor County,46.97,-124.14,6310
+98570,Onalaska,,WA,Lewis County,46.6,-122.67,3860
+98571,Pacific Beach,,WA,Grays Harbor County,47.21,-124.19,300
+98572,Pe Ell,,WA,Lewis County,46.55,-123.31,800
+98575,Quinault,,WA,Grays Harbor County,47.44,-123.77,185
+98576,Rainier,,WA,Thurston County,46.87,-122.66,5280
+98577,Raymond,,WA,Pacific County,46.64,-123.63,5270
+98579,Rochester,,WA,Thurston County,46.8,-123.14,12300
+98580,Roy,,WA,Pierce County,46.98,-122.47,10060
+98581,Ryderwood,,WA,Cowlitz County,46.36,-123.07,280
+98582,Salkum,,WA,Lewis County,46.51,-122.63,700
+98583,Satsop,,WA,Grays Harbor County,47,-123.49,347
+98584,Shelton,"Skok, Skokomish Nation",WA,Mason County,47.23,-123.2,32540
+98585,Silver Creek,,WA,Lewis County,46.55,-122.46,640
+98586,South Bend,,WA,Pacific County,46.56,-123.88,1870
+98587,Taholah,,WA,Grays Harbor County,47.31,-124.22,793
+98588,Tahuya,,WA,Mason County,47.44,-123.02,1500
+98589,Tenino,,WA,Thurston County,46.84,-122.85,7340
+98590,Tokeland,,WA,Pacific County,46.71,-124,320
+98591,Toledo,,WA,Lewis County,46.45,-122.76,4310
+98592,Union,,WA,Mason County,47.33,-123.06,1970
+98593,Vader,,WA,Lewis County,46.41,-122.99,990
+98595,Westport,,WA,Grays Harbor County,46.87,-124.11,2600
+98596,Winlock,,WA,Lewis County,46.48,-122.87,5960
+98597,Yelm,,WA,Thurston County,46.87,-122.57,24880
+98599,Olympia,,WA,Thurston County,46.99,-122.87,0
+98601,Amboy,,WA,Clark County,45.93,-122.44,3540
+98602,Appleton,,WA,Klickitat County,45.85,-121.28,230
+98603,Ariel,,WA,Cowlitz County,46.01,-122.47,820
+98604,Battle Ground,,WA,Clark County,45.8,-122.48,37340
+98605,Bingen,Cook,WA,Klickitat County,45.77,-121.66,1390
+98606,Brush Prairie,,WA,Clark County,45.73,-122.45,10370
+98607,Camas,,WA,Clark County,45.64,-122.37,34580
+98609,Carrolls,,WA,Cowlitz County,46.07,-122.86,133
+98610,Carson,,WA,Skamania County,45.79,-121.89,2680
+98611,Castle Rock,,WA,Cowlitz County,46.29,-122.95,9740
+98612,Cathlamet,,WA,Wahkiakum County,46.22,-123.31,2680
+98613,Centerville,,WA,Klickitat County,45.74,-120.93,360
+98614,Chinook,,WA,Pacific County,46.28,-123.91,478
+98616,Cougar,,WA,Cowlitz County,46.19,-122.13,280
+98617,Dallesport,,WA,Klickitat County,45.66,-121.13,937
+98619,Glenwood,,WA,Klickitat County,45.98,-121.27,390
+98620,Goldendale,,WA,Klickitat County,45.84,-120.76,6480
+98621,Grays River,,WA,Wahkiakum County,46.35,-123.6,170
+98622,Heisson,,WA,Clark County,45.82,-122.48,348
+98623,Husum,,WA,Klickitat County,45.8,-121.46,403
+98624,Ilwaco,,WA,Pacific County,46.31,-123.99,1160
+98625,Kalama,,WA,Cowlitz County,46.01,-122.7,7200
+98626,Kelso,,WA,Cowlitz County,46.14,-122.8,22990
+98628,Klickitat,,WA,Klickitat County,45.89,-121.08,360
+98629,La Center,,WA,Clark County,45.87,-122.61,9170
+98631,Long Beach,,WA,Pacific County,46.39,-124.03,3210
+98632,Longview,,WA,Cowlitz County,46.19,-123.05,43740
+98635,Lyle,,WA,Klickitat County,45.72,-121.16,1610
+98637,Nahcotta,,WA,Pacific County,46.49,-124.03,83
+98638,Naselle,,WA,Pacific County,46.36,-123.75,1410
+98639,North Bonneville,N Bonneville,WA,Skamania County,45.67,-121.99,825
+98640,Ocean Park,,WA,Pacific County,46.54,-124.04,4220
+98641,Oysterville,,WA,Pacific County,46.55,-124.03,167
+98642,Ridgefield,,WA,Clark County,45.79,-122.69,23490
+98643,Rosburg,,WA,Wahkiakum County,46.29,-123.63,340
+98644,Seaview,,WA,Pacific County,46.33,-124.05,662
+98645,Silverlake,,WA,Cowlitz County,46.32,-122.78,1410
+98647,Skamokawa,,WA,Wahkiakum County,46.28,-123.44,390
+98648,Stevenson,,WA,Skamania County,45.7,-121.72,2700
+98649,Toutle,,WA,Cowlitz County,46.31,-122.69,1150
+98650,Trout Lake,,WA,Klickitat County,45.97,-121.53,1160
+98651,Underwood,,WA,Skamania County,45.74,-121.58,810
+98660,Vancouver,,WA,Clark County,45.72,-122.74,10090
+98661,Vancouver,,WA,Clark County,45.64,-122.63,40150
+98662,Vancouver,,WA,Clark County,45.68,-122.57,33500
+98663,Vancouver,,WA,Clark County,45.65,-122.66,12960
+98664,Vancouver,,WA,Clark County,45.62,-122.57,20560
+98665,Vancouver,,WA,Clark County,45.67,-122.66,26610
+98666,Vancouver,,WA,Clark County,45.71,-122.59,1090
+98667,Vancouver,,WA,Clark County,45.63,-122.66,0
+98668,Vancouver,,WA,Clark County,45.71,-122.62,1680
+98670,Wahkiacus,Klickitat,WA,Klickitat County,45.85,-121.14,29
+98671,Washougal,,WA,Clark County,45.61,-122.23,23150
+98672,White Salmon,,WA,Klickitat County,45.82,-121.46,6520
+98673,Wishram,,WA,Klickitat County,45.66,-121.03,233
+98674,Woodland,,WA,Cowlitz County,45.94,-122.67,13990
+98675,Yacolt,,WA,Clark County,45.83,-122.38,6390
+98682,Vancouver,,WA,Clark County,45.67,-122.47,63220
+98683,Vancouver,,WA,Clark County,45.6,-122.51,30350
+98684,Vancouver,,WA,Clark County,45.63,-122.52,29450
+98685,Vancouver,,WA,Clark County,45.7,-122.69,28550
+98686,Vancouver,,WA,Clark County,45.72,-122.61,19810
+98687,Vancouver,,WA,Clark County,45.63,-122.52,1828
+98801,Wenatchee,,WA,Chelan County,47.37,-120.35,39380
+98802,East Wenatchee,"E Wenatchee, Wenatchee",WA,Douglas County,47.49,-120.19,29920
+98807,Wenatchee,,WA,Chelan County,47.37,-120.29,3875
+98811,Ardenvoir,,WA,Chelan County,47.72,-120.36,81
+98812,Brewster,,WA,Okanogan County,48.15,-119.82,5560
+98813,Bridgeport,,WA,Douglas County,47.97,-119.59,5300
+98814,Carlton,,WA,Okanogan County,48.21,-120.16,470
+98815,Cashmere,,WA,Chelan County,47.55,-120.48,7060
+98816,Chelan,,WA,Chelan County,47.89,-119.99,7620
+98817,Chelan Falls,,WA,Chelan County,47.79,-119.99,338
+98819,Conconully,,WA,Okanogan County,48.55,-119.81,197
+98821,Dryden,,WA,Chelan County,47.54,-120.55,954
+98822,Entiat,,WA,Chelan County,47.79,-120.44,2100
+98823,Ephrata,,WA,Grant County,47.27,-119.59,11400
+98824,George,,WA,Grant County,47.08,-119.86,439
+98826,Leavenworth,,WA,Chelan County,47.81,-120.86,6740
+98827,Loomis,,WA,Okanogan County,48.87,-119.73,290
+98828,Malaga,,WA,Chelan County,47.32,-120.19,2290
+98829,Malott,,WA,Okanogan County,48.3,-119.77,701
+98830,Mansfield,,WA,Douglas County,47.89,-119.5,440
+98831,Manson,,WA,Chelan County,47.97,-120.15,3760
+98832,Marlin,,WA,Grant County,47.27,-119.04,420
+98833,Mazama,,WA,Okanogan County,48.59,-120.39,118
+98834,Methow,,WA,Okanogan County,48.14,-120.05,190
+98836,Monitor,,WA,Chelan County,47.47,-120.41,1015
+98837,Moses Lake,,WA,Grant County,47.19,-119.3,42030
+98840,Okanogan,,WA,Okanogan County,48.22,-119.45,4020
+98841,Omak,,WA,Okanogan County,48.36,-119.27,7810
+98843,Orondo,,WA,Douglas County,47.72,-120.15,1750
+98844,Oroville,,WA,Okanogan County,48.87,-119.22,3620
+98845,Palisades,,WA,Douglas County,47.38,-119.96,111
+98846,Pateros,,WA,Okanogan County,48.01,-119.97,1190
+98847,Peshastin,,WA,Chelan County,47.51,-120.62,1720
+98848,Quincy,George,WA,Grant County,47.17,-119.8,14320
+98849,Riverside,,WA,Okanogan County,48.56,-119.35,900
+98850,Rock Island,,WA,Douglas County,47.31,-120.08,2080
+98851,Soap Lake,,WA,Grant County,47.41,-119.43,3580
+98852,Stehekin,,WA,Chelan County,48.34,-120.7,85
+98853,Stratford,,WA,Grant County,47.44,-119.27,75
+98855,Tonasket,,WA,Okanogan County,48.68,-119.3,5100
+98856,Twisp,,WA,Okanogan County,48.32,-119.93,2430
+98857,Warden,,WA,Grant County,47.01,-119.12,3860
+98858,Waterville,,WA,Douglas County,47.69,-119.88,1490
+98859,Wauconda,,WA,Okanogan County,48.82,-118.95,180
+98860,Wilson Creek,,WA,Grant County,47.46,-119.14,231
+98862,Winthrop,,WA,Okanogan County,48.5,-120.33,2590
+98901,Yakima,Union Gap,WA,Yakima County,46.72,-120.41,26840
+98902,Yakima,,WA,Yakima County,46.59,-120.53,40670
+98903,Yakima,Union Gap,WA,Yakima County,46.54,-120.76,15710
+98904,Yakima,Gleed,WA,Yakima County,46.6,-120.5,155
+98907,Yakima,,WA,Yakima County,46.59,-120.52,1827
+98908,Yakima,,WA,Yakima County,46.62,-120.69,35080
+98909,Yakima,,WA,Yakima County,46.54,-120.64,1589
+98920,Brownstown,,WA,Yakima County,46.4,-120.6,226
+98921,Buena,,WA,Yakima County,46.43,-120.32,953
+98922,Cle Elum,,WA,Kittitas County,47.2,-120.9,6220
+98923,Cowiche,,WA,Yakima County,46.67,-120.72,1430
+98925,Easton,,WA,Kittitas County,47.35,-121.27,661
+98926,Ellensburg,Kittitas,WA,Kittitas County,46.97,-120.47,25260
+98929,Naches,Goose Prairie,WA,Yakima County,46.88,-121.29,0
+98930,Grandview,,WA,Yakima County,46.26,-119.9,14920
+98932,Granger,,WA,Yakima County,46.32,-120.15,5630
+98933,Harrah,,WA,Yakima County,46.4,-120.64,1220
+98934,Kittitas,,WA,Kittitas County,46.98,-120.41,1163
+98935,Mabton,,WA,Yakima County,46.15,-120.09,3980
+98936,Moxee,,WA,Yakima County,46.52,-120.2,6510
+98937,Naches,Goose Prairie,WA,Yakima County,46.78,-120.88,4160
+98938,Outlook,,WA,Yakima County,46.37,-120.09,1980
+98939,Parker,,WA,Yakima County,46.5,-120.47,513
+98940,Ronald,,WA,Kittitas County,47.25,-121.05,415
+98941,Roslyn,,WA,Kittitas County,47.23,-121,1048
+98942,Selah,,WA,Yakima County,46.76,-120.68,17470
+98943,South Cle Elum,S Cle Elum,WA,Kittitas County,47.18,-120.97,951
+98944,Sunnyside,,WA,Yakima County,46.44,-119.91,22450
+98946,Thorp,,WA,Kittitas County,47.08,-120.71,510
+98947,Tieton,,WA,Yakima County,46.71,-120.76,2990
+98948,Toppenish,,WA,Yakima County,46.28,-120.25,12660
+98950,Vantage,Ellensburg,WA,Kittitas County,46.86,-119.99,188
+98951,Wapato,,WA,Yakima County,46.45,-120.51,12450
+98952,White Swan,,WA,Yakima County,46.36,-120.78,1500
+98953,Zillah,,WA,Yakima County,46.41,-120.23,6690
+99001,Airway Heights,Airway Hgts,WA,Spokane County,47.64,-117.59,6100
+99003,Chattaroy,,WA,Spokane County,47.92,-117.28,5220
+99004,Cheney,,WA,Spokane County,47.43,-117.62,16270
+99005,Colbert,,WA,Spokane County,47.84,-117.35,10160
+99006,Deer Park,,WA,Spokane County,47.99,-117.5,12770
+99008,Edwall,,WA,Lincoln County,47.51,-117.92,540
+99009,Elk,,WA,Spokane County,48.01,-117.22,3670
+99011,Fairchild Air Force Base,Fairchild AFB,WA,Spokane County,47.61,-117.65,2300
+99012,Fairfield,,WA,Spokane County,47.39,-117.18,890
+99013,Ford,,WA,Stevens County,47.91,-117.8,1030
+99014,Four Lakes,,WA,Spokane County,47.56,-117.59,268
+99016,Greenacres,"Liberty Lake, Spokane Valley, Spokane Vly",WA,Spokane County,47.63,-117.14,17380
+99017,Lamont,Sprague,WA,Whitman County,47.16,-117.84,192
+99018,Latah,,WA,Spokane County,47.3,-117.14,240
+99019,Liberty Lake,,WA,Spokane County,47.63,-117.09,12420
+99020,Marshall,,WA,Spokane County,47.56,-117.5,172
+99021,Mead,,WA,Spokane County,47.83,-117.21,9500
+99022,Medical Lake,Espanola,WA,Spokane County,47.61,-117.7,8170
+99023,Mica,Valleyford,WA,Spokane County,47.56,-117.17,620
+99025,Newman Lake,,WA,Spokane County,47.77,-117.09,5080
+99026,Nine Mile Falls,Nine Mile Fls,WA,Stevens County,47.8,-117.62,9550
+99027,Otis Orchards,"City Of Spokane Valley, Spokane Valley, Spokane Vly",WA,Spokane County,47.71,-117.13,6230
+99029,Reardan,,WA,Lincoln County,47.69,-117.86,1600
+99030,Rockford,,WA,Spokane County,47.48,-117.14,1060
+99031,Spangle,,WA,Spokane County,47.44,-117.35,1290
+99032,Sprague,,WA,Lincoln County,47.33,-118.04,610
+99033,Tekoa,,WA,Whitman County,47.24,-117.11,750
+99034,Tumtum,,WA,Stevens County,47.89,-117.76,270
+99036,Valleyford,,WA,Spokane County,47.53,-117.26,1720
+99037,Veradale,"City Of Spokane Valley, Spokane Valley, Spokane Vly",WA,Spokane County,47.64,-117.2,15620
+99039,Waverly,,WA,Spokane County,47.34,-117.27,132
+99040,Wellpinit,,WA,Stevens County,47.89,-117.99,990
+99101,Addy,,WA,Stevens County,48.32,-117.91,1350
+99102,Albion,,WA,Whitman County,46.79,-117.25,538
+99103,Almira,,WA,Lincoln County,47.72,-118.93,450
+99104,Belmont,Farmington,WA,Whitman County,47.08,-117.16,0
+99105,Benge,,WA,Adams County,46.88,-118.15,56
+99107,Boyds,Kettle Falls,WA,Ferry County,48.99,-118.21,38
+99109,Chewelah,,WA,Stevens County,48.26,-117.76,4520
+99110,Clayton,,WA,Stevens County,48.03,-117.57,1600
+99111,Colfax,Diamond,WA,Whitman County,46.85,-117.44,3650
+99113,Colton,,WA,Whitman County,46.56,-117.22,780
+99114,Colville,,WA,Stevens County,48.67,-117.75,10590
+99115,Coulee City,,WA,Grant County,47.66,-119.43,1000
+99116,Coulee Dam,,WA,Douglas County,48.03,-118.94,1220
+99117,Creston,,WA,Lincoln County,47.71,-118.51,380
+99118,Curlew,,WA,Ferry County,48.87,-118.63,560
+99119,Cusick,,WA,Pend Oreille County,48.51,-117.37,870
+99121,Danville,,WA,Ferry County,48.94,-118.46,133
+99122,Davenport,"Deer Meadows, Seven Bays",WA,Lincoln County,47.67,-118.19,3680
+99123,Electric City,,WA,Grant County,47.87,-119.08,950
+99124,Elmer City,,WA,Okanogan County,48,-118.95,385
+99125,Endicott,,WA,Whitman County,46.95,-117.73,450
+99126,Evans,Kettle Falls,WA,Stevens County,48.72,-117.96,820
+99128,Farmington,,WA,Whitman County,47.11,-117.07,250
+99129,Fruitland,Hunters,WA,Stevens County,48,-118.2,440
+99130,Garfield,,WA,Whitman County,46.99,-117.16,770
+99131,Gifford,,WA,Stevens County,48.29,-118.09,117
+99133,Grand Coulee,,WA,Grant County,47.99,-119,1240
+99134,Harrington,,WA,Lincoln County,47.42,-118.4,530
+99135,Hartline,,WA,Grant County,47.68,-119.12,240
+99136,Hay,,WA,Whitman County,46.67,-117.96,21
+99137,Hunters,,WA,Stevens County,48.17,-118.12,320
+99138,Inchelium,,WA,Ferry County,48.2,-118.24,980
+99139,Ione,,WA,Pend Oreille County,48.69,-117.29,1050
+99140,Keller,,WA,Ferry County,48.1,-118.71,270
+99141,Kettle Falls,,WA,Stevens County,48.74,-118.09,4930
+99143,Lacrosse,,WA,Whitman County,46.73,-117.87,510
+99144,Lamona,Odessa,WA,Lincoln County,47.35,-118.48,32
+99146,Laurier,,WA,Ferry County,48.95,-118.28,48
+99147,Lincoln,Creston,WA,Lincoln County,47.83,-118.46,152
+99148,Loon Lake,,WA,Stevens County,48.09,-117.58,2090
+99149,Malden,,WA,Whitman County,47.22,-117.46,121
+99150,Malo,,WA,Ferry County,48.81,-118.61,330
+99151,Marcus,,WA,Stevens County,48.66,-118.06,141
+99152,Metaline,,WA,Pend Oreille County,48.84,-117.4,169
+99153,Metaline Falls,Metaline Fls,WA,Pend Oreille County,48.89,-117.21,380
+99154,Mohler,Harrington,WA,Lincoln County,47.36,-118.35,0
+99155,Nespelem,,WA,Okanogan County,48.21,-119.04,1020
+99156,Newport,,WA,Pend Oreille County,48.15,-117.24,7500
+99157,Northport,,WA,Stevens County,48.93,-117.77,630
+99158,Oakesdale,,WA,Whitman County,47.12,-117.25,550
+99159,Odessa,,WA,Lincoln County,47.34,-118.66,1130
+99160,Orient,Kettle Falls,WA,Ferry County,48.84,-118.31,142
+99161,Palouse,,WA,Whitman County,46.88,-117.15,1340
+99163,Pullman,,WA,Whitman County,46.72,-117.18,17720
+99164,Pullman,,WA,Whitman County,46.73,-117.15,38
+99165,Pullman,,WA,Whitman County,46.73,-117.17,20
+99166,Republic,,WA,Ferry County,48.59,-118.7,2420
+99167,Rice,,WA,Stevens County,48.42,-118.11,610
+99169,Ritzville,,WA,Adams County,47.07,-118.47,2180
+99170,Rosalia,Plaza,WA,Whitman County,47.25,-117.38,940
+99171,Saint John,,WA,Whitman County,47.1,-117.64,880
+99173,Springdale,,WA,Stevens County,48.02,-117.85,1520
+99174,Steptoe,,WA,Whitman County,47.01,-117.36,71
+99176,Thornton,,WA,Whitman County,47.09,-117.39,175
+99179,Uniontown,,WA,Whitman County,46.51,-117.13,460
+99180,Usk,,WA,Pend Oreille County,48.3,-117.36,1080
+99181,Valley,,WA,Stevens County,48.14,-117.76,1720
+99185,Wilbur,,WA,Lincoln County,47.72,-118.7,1290
+99201,Spokane,,WA,Spokane County,47.66,-117.43,9730
+99202,Spokane,,WA,Spokane County,47.65,-117.37,13970
+99203,Spokane,,WA,Spokane County,47.62,-117.4,19860
+99204,Spokane,,WA,Spokane County,47.65,-117.43,5210
+99205,Spokane,,WA,Spokane County,47.69,-117.45,37380
+99206,Spokane,"Millwood, Spokane Valley, Spokane Vly",WA,Spokane County,47.63,-117.25,34690
+99207,Spokane,,WA,Spokane County,47.69,-117.38,25280
+99208,Spokane,,WA,Spokane County,47.78,-117.45,51880
+99209,Spokane,,WA,Spokane County,47.69,-117.44,1317
+99210,Spokane,,WA,Spokane County,47.65,-117.42,861
+99211,Spokane,"Spokane Valley, Spokane Vly",WA,Spokane County,47.66,-117.31,340
+99212,Spokane,"Millwood, Spokane Valley, Spokane Vly",WA,Spokane County,47.65,-117.31,18540
+99213,Spokane,"Spokane Valley, Spokane Vly",WA,Spokane County,47.65,-117.29,363
+99214,Spokane,"Spokane Valley, Spokane Vly",WA,Spokane County,47.71,-117.2,1251
+99215,Spokane,"Spokane Valley, Spokane Vly",WA,Spokane County,47.69,-117.2,99
+99216,Spokane,"Spokane Valley, Spokane Vly",WA,Spokane County,47.69,-117.19,23360
+99217,Spokane,,WA,Spokane County,47.74,-117.25,16920
+99218,Spokane,,WA,Spokane County,47.75,-117.43,12890
+99219,Spokane,Sunset Hill,WA,Spokane County,47.63,-117.54,314
+99220,Spokane,,WA,Spokane County,47.64,-117.41,565
+99223,Spokane,"Spokane Valley, Spokane Vly",WA,Spokane County,47.59,-117.35,30660
+99224,Spokane,,WA,Spokane County,47.63,-117.55,21020
+99228,Spokane,,WA,Spokane County,47.79,-117.38,1319
+99251,Spokane,,WA,Spokane County,47.75,-117.42,46
+99252,Spokane,,WA,Spokane County,47.65,-117.37,0
+99256,Spokane,,WA,Spokane County,47.66,-117.42,0
+99258,Spokane,,WA,Spokane County,47.66,-117.4,92
+99260,Spokane,,WA,Spokane County,47.66,-117.42,0
+99299,Spokane,,WA,Spokane County,47.65,-117.42,0
+99301,Pasco,,WA,Franklin County,46.41,-118.9,81080
+99302,Pasco,Tri Cities,WA,Franklin County,46.25,-119.08,2500
+99320,Benton City,,WA,Benton County,46.24,-119.49,9210
+99321,Beverly,,WA,Grant County,46.87,-119.81,1180
+99322,Bickleton,,WA,Klickitat County,45.92,-120.19,210
+99323,Burbank,,WA,Walla Walla County,46.22,-118.82,3580
+99324,College Place,,WA,Walla Walla County,46.04,-118.4,8090
+99326,Connell,,WA,Franklin County,46.66,-118.9,3570
+99328,Dayton,,WA,Columbia County,46.31,-117.9,3010
+99329,Dixie,,WA,Walla Walla County,46.16,-118.15,280
+99330,Eltopia,,WA,Franklin County,46.5,-119.05,1710
+99333,Hooper,,WA,Whitman County,46.75,-118.14,53
+99335,Kahlotus,,WA,Franklin County,46.66,-118.56,282
+99336,Kennewick,,WA,Benton County,46.21,-119.16,44740
+99337,Kennewick,,WA,Benton County,46.07,-119.08,31340
+99338,Kennewick,,WA,Benton County,46.16,-119.25,18680
+99341,Lind,,WA,Adams County,46.9,-118.68,650
+99343,Mesa,,WA,Franklin County,46.58,-119.15,3020
+99344,Othello,Hatton,WA,Adams County,46.8,-119.15,18890
+99345,Paterson,,WA,Benton County,45.94,-119.66,357
+99346,Plymouth,,WA,Benton County,46,-119.3,380
+99347,Pomeroy,,WA,Garfield County,46.44,-117.54,2000
+99348,Prescott,,WA,Walla Walla County,46.35,-118.47,1220
+99349,Mattawa,Desert Aire,WA,Grant County,46.72,-119.73,9060
+99350,Prosser,,WA,Benton County,46.12,-119.68,12630
+99352,Richland,,WA,Benton County,46.25,-119.29,34300
+99353,West Richland,Richland,WA,Benton County,46.31,-119.37,17280
+99354,Richland,,WA,Benton County,46.35,-119.32,21790
+99356,Roosevelt,,WA,Klickitat County,45.85,-120.34,270
+99357,Royal City,,WA,Grant County,46.9,-119.66,5590
+99359,Starbuck,,WA,Columbia County,46.55,-118.19,113
+99360,Touchet,Lowden,WA,Walla Walla County,46.12,-118.64,1380
+99361,Waitsburg,,WA,Walla Walla County,46.22,-118.15,1620
+99362,Walla Walla,,WA,Walla Walla County,46.11,-118.3,35740
+99363,Wallula,,WA,Walla Walla County,46.06,-118.89,200
+99371,Washtucna,,WA,Adams County,46.82,-118.32,230
+99401,Anatone,,WA,Asotin County,46.08,-117.27,250
+99402,Asotin,,WA,Asotin County,46.19,-117.13,1640
+99403,Clarkston,,WA,Asotin County,46.36,-117.22,17020

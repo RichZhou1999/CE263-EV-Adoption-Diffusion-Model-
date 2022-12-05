@@ -1,0 +1,194 @@
+,county,total_reg,week_to_cm
+0,King,61608,213
+1,Kitsap,3491,172
+2,Thurston,3442,232
+3,Pierce,7544,226
+4,Clark,5558,236
+5,Spokane,2269,258
+6,Island,999,283
+7,Snohomish,11638,234
+8,San Juan,413,225
+9,Skagit,1050,214
+10,Jefferson,507,191
+11,Whatcom,2125,223
+12,Yakima,438,292
+13,Clallam,548,235
+14,Benton,1079,270
+15,Cowlitz,486,259
+16,Chelan,467,273
+17,Grays Harbor,276,292
+18,Mason,426,175
+19,Lewis,331,306
+20,Skamania,100,344
+21,Douglas,172,245
+22,Okanogan,107,337
+23,Kittitas,262,323
+24,Grant,217,302
+25,Whitman,144,313
+26,Walla Walla,222,326
+27,Klickitat,153,251
+28,Stevens,98,244
+29,Lincoln,17,229
+30,Asotin,33,270
+31,Franklin,288,277
+32,Pacific,115,335
+33,Denton,2,152
+34,Kenai Peninsula,1,123
+35,Columbia,14,346
+36,St. Clair,2,156
+37,Ferry,20,361
+38,Dallas,2,182
+39,San Diego,16,326
+40,Wahkiakum,25,347
+41,New London,3,190
+42,Bexar,10,342
+43,Los Angeles,13,351
+44,Adams,27,340
+45,Pend Oreille,30,339
+46,Ventura,7,278
+47,Wayne,4,307
+48,Bergen,3,298
+49,Saratoga,1,303
+50,Miami-Dade,1,278
+51,Multnomah,7,332
+52,Orange,11,314
+53,Nueces,2,357
+54,Santa Clara,12,353
+55,Nassau,3,319
+56,Lumpkin,1,339
+57,Rockbridge,1,336
+58,Contra Costa,5,431
+59,Montgomery,10,396
+60,New Castle,1,333
+61,Palm Beach,2,328
+62,Ramsey,1,333
+63,Alexandria,6,419
+64,Maricopa,5,410
+65,Kanabec,1,347
+66,Hamilton,3,314
+67,Liberty,1,349
+68,El Paso,4,399
+69,Washoe,3,339
+70,Knox,1,327
+71,Fairfax,7,403
+72,Norfolk,1,317
+73,Morris,1,314
+74,District of Columbia,4,491
+75,Guilford,1,363
+76,Riverside,8,372
+77,Sacramento,2,343
+78,Clay,1,351
+79,Honolulu,5,441
+80,Tarrant,2,337
+81,Albemarle,2,326
+82,Hennepin,2,408
+83,Ada,1,371
+84,Rogers,1,406
+85,Clackamas,1,413
+86,Carson City,1,395
+87,Anne Arundel,10,411
+88,Cook,3,367
+89,St. Mary's,2,389
+90,Prince William,4,432
+91,Santa Cruz,1,405
+92,Broward,4,373
+93,San Mateo,1,413
+94,Caddo,1,371
+95,Tulsa,2,380
+96,San Francisco,3,388
+97,Houston,1,398
+98,Larimer,1,400
+99,Travis,4,421
+100,Kootenai,1,408
+101,Alameda,6,423
+102,Oldham,1,403
+103,Valencia,1,408
+104,Bucks,1,410
+105,Klamath,1,378
+106,Washtenaw,1,375
+107,Mecklenburg,2,401
+108,Santa Barbara,1,407
+109,Washington,3,385
+110,Fresno,1,400
+111,Cumberland,4,418
+112,Suffolk,2,396
+113,Jackson,1,382
+114,Shasta,1,406
+115,Camden,2,388
+116,Cochise,1,389
+117,Fulton,2,392
+118,Sangamon,1,423
+119,Stafford,2,450
+120,Sarasota,2,441
+121,Harris,1,442
+122,Jones,1,450
+123,Goochland,5,458
+124,Greene,1,451
+125,Sedgwick,1,441
+126,Harnett,1,432
+127,Chaves,1,423
+128,DuPage,2,441
+129,Lake,3,444
+130,Osceola,1,447
+131,Harrison,2,446
+132,Williamson,1,422
+133,Putnam,1,440
+134,Davidson,1,453
+135,Sumner,1,432
+136,Calvert,2,421
+137,Arlington,1,422
+138,Pinellas,1,448
+139,Kern,1,459
+140,Arapahoe,2,458
+141,Powhatan,1,445
+142,Penobscot,1,418
+143,Frederick,1,433
+144,Saginaw,1,437
+145,R√É¬≠o Grande,1,441
+146,Solano,1,436
+147,New York,1,497
+148,Bradley,1,497
+149,St. Louis,1,482
+150,Platte,1,510
+151,Tipton,1,471
+152,Placer,1,475
+153,Erie,1,482
+154,Charleston,2,498
+155,Laramie,1,518
+156,El Dorado,1,508
+157,Monterey,1,481
+158,Philadelphia,1,517
+159,Missoula,1,514
+160,Prince George's,1,503
+161,St. Johns,1,504
+162,Kings,1,497
+163,Hampshire,1,510
+164,Pennington,1,522
+165,Milwaukee,1,525
+166,Champaign,1,539
+167,San Luis Obispo,1,555
+168,Boulder,1,563
+169,Leavenworth,1,566
+170,Portsmouth,1,551
+171,Rockdale,1,548
+172,Virginia Beach,1,526
+173,Yamhill,1,534
+174,Pinal,1,547
+175,Las Animas,1,548
+176,Charles,1,545
+177,Coryell,1,562
+178,Baltimore,1,550
+179,Salt Lake,1,571
+180,Newport,1,548
+181,Queens,1,527
+182,Garfield,1,544
+183,Geary,1,553
+184,Marin,1,565
+185,Hudson,1,542
+186,Middlesex,2,599
+187,Sheridan,1,599
+188,Hillsborough,1,584
+189,Hoke,1,602
+190,Pulaski,1,602
+191,Monroe,1,589
+192,Loudoun,1,590
