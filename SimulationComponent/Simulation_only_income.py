@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 import pickle
 from SimulationComponent.Simulation import Simulation
 
-
 if __name__ == "__main__":
 
     WA_ZIPCODE_COORDINATES_PATH = os.path.join(
@@ -80,20 +79,22 @@ if __name__ == "__main__":
     G.generate_edge_list(WA_ZIPCODE_COORDINATES_PATH, M_PATH)
     G.generate_edges()
     G.set_node_degree()
-
-    simulation_paras = {"income_coeff": 9.32e-6,
-                        "neighbor_adoption_coeff": 7.15e-3}
-    simulation_time_length = 684
-
+    #9.1e-6,8.62e-3
+    #9.3 8.426
+    #9.23, 8.48
+    simulation_paras = {"income_coeff": 4e-5,
+                        "neighbor_adoption_coeff": 0}
+    simulation_time_length = 612
     simulation = Simulation(G, simulation_time_length, simulation_paras)
     simulation.run()
     print("absolute error", simulation.calculate_absolute_error(path))
-    # simulation.show_adoption_history(path)
-    ZIPCODE_COORDINATES = pd.read_csv(WA_ZIPCODE_COORDINATES_PATH)
-    city = "Tacoma"
-    print(ZIPCODE_COORDINATES['City'])
-    zipcode_list = ZIPCODE_COORDINATES[ZIPCODE_COORDINATES['City'] ==city]['Zip']
-    zipcode_list = list(zipcode_list)
-    print(zipcode_list)
-
-    simulation.plot_zipcode_adoption_curve(zipcode_list, city)
+    simulation.show_adoption_history(path)
+    simulation.output_adoption_history()
+    # ZIPCODE_COORDINATES = pd.read_csv(WA_ZIPCODE_COORDINATES_PATH)
+    # city = "Tacoma"
+    # print(ZIPCODE_COORDINATES['City'])
+    # zipcode_list = ZIPCODE_COORDINATES[ZIPCODE_COORDINATES['City'] ==city]['Zip']
+    # zipcode_list = list(zipcode_list)
+    # print(zipcode_list)
+    #
+    # simulation.plot_zipcode_adoption_curve(zipcode_list, city)

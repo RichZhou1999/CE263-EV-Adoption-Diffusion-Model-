@@ -9,8 +9,8 @@ from NetworkComponent.NetworkCreatorNetworkit import *
 import matplotlib.pyplot as plt
 import pickle
 
-
 class Simulation:
+
     def __init__(self, graph,
                  simulation_time_length: int, simulation_paras: dict):
         self.G = graph
@@ -20,7 +20,8 @@ class Simulation:
         self.neighbor_adoption_coeff = simulation_paras["neighbor_adoption_coeff"]
         self.current_adoption_number = 0
         self.adoption_history_list = []
-
+        self.colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
+          '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
     def run(self):
         
         print()
@@ -59,17 +60,17 @@ class Simulation:
         fig = plt.figure()
         y = np.array(self.adoption_history_list) / self.G.scale
         x = range(len(self.adoption_history_list))
-        plt.plot(x, y, label='model curve', linestyle='--')
+        plt.plot(x, y, label='model curve', linestyle='--', color=self.colors[0])
         empirical_data = pd.read_csv(empirical_csv_path)
         empirical_data = empirical_data['cum_reg']
         empirical_data_time_range = range(len(empirical_data))
-        plt.plot(empirical_data_time_range, empirical_data, label='empirical curve', linestyle="solid")
+        plt.plot(empirical_data_time_range, empirical_data, label='empirical curve', linestyle="solid",color=self.colors[1])
         p = np.polyfit(range(len(empirical_data)), np.log(empirical_data), 1)
         a = np.exp(p[1])
         b = p[0]
         x_fitted = np.linspace(0, len(empirical_data), 100)
         y_fitted = a * np.exp(b * x_fitted)
-        plt.plot(x_fitted, y_fitted, label='baseline exponential curve',linestyle="-.")
+        plt.plot(x_fitted, y_fitted, label='baseline exponential curve',linestyle="-.", color=self.colors[4])
         plt.xlabel('Time')
         plt.ylabel("Adoption Number")
 
@@ -85,6 +86,10 @@ class Simulation:
         plt.legend()
         plt.show()
 
+    def output_adoption_history(self):
+        with open("adoption_history.pkl", "wb") as f:
+            pickle.dump(np.array(self.adoption_history_list) / self.G.scale, f)
+            print("output successfully")
     def calculate_absolute_error(self, empirical_csv_path):
         empirical_data = pd.read_csv(empirical_csv_path)
         empirical_data = empirical_data['cum_reg']
@@ -96,7 +101,7 @@ class Simulation:
             error += abs(empirical_data[i] - model_data[i])
             if i == min_length - 1:
                 print(abs(empirical_data[i] - model_data[i]))
-        return error
+        return error/self.simulation_time_length
 
     def reset(self):
         self.adoption_history_list = []
@@ -205,14 +210,17 @@ if __name__ == "__main__":
     G.generate_edge_list(WA_ZIPCODE_COORDINATES_PATH, M_PATH)
     G.generate_edges()
     G.set_node_degree()
-
-    simulation_paras = {"income_coeff": 9.1e-6,
-                        "neighbor_adoption_coeff": 8.62e-3}
-    simulation_time_length = 860
+    #9.1e-6,8.62e-3
+    #9.3 8.426
+    #9.23, 8.48
+    simulation_paras = {"income_coeff": 9.28e-6,
+                        "neighbor_adoption_coeff": 8.429e-3}
+    simulation_time_length = 612
     simulation = Simulation(G, simulation_time_length, simulation_paras)
     simulation.run()
     print("absolute error", simulation.calculate_absolute_error(path))
     simulation.show_adoption_history(path)
+    simulation.output_adoption_history()
     # ZIPCODE_COORDINATES = pd.read_csv(WA_ZIPCODE_COORDINATES_PATH)
     # city = "Tacoma"
     # print(ZIPCODE_COORDINATES['City'])
