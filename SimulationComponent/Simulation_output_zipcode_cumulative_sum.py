@@ -198,7 +198,7 @@ class Simulation:
         mypath = os.path.join(
             os.path.dirname(__file__), '..', 'Results')
         onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-        onlyfiles = [f for f in onlyfiles if ".csv" in f]
+        onlyfiles = [f for f in onlyfiles if (".csv" in f) and ("out" in f)]
         output_dataframe.to_csv("../Results/output_%s.csv" %(len(onlyfiles)))
 
 
@@ -241,14 +241,15 @@ if __name__ == "__main__":
         G.generate_edges()
         G.set_node_degree()
 
-        simulation_paras = {"income_coeff": 9.32e-6,
-                            "neighbor_adoption_coeff": 7.15e-3}
-
-        simulation_time_length = 1000
+        simulation_paras = {"income_coeff": 9.1e-6,
+                            "neighbor_adoption_coeff": 8.62e-3}
+        #860 5%
+        simulation_time_length = 611
         simulation = Simulation(G, simulation_time_length, simulation_paras)
         simulation.run()
-        simulation.output_weekly_cumulative_adoption()
+        # simulation.output_weekly_cumulative_adoption()
+        #simulation.output_cumulative_sum_by_zipcode(simulation_time_length)
         # simulation.show_adoption_history(path)
         # print("absolute error", simulation.calculate_absolute_error(path))
         # simulation.output_cumulative_sum_by_zipcode(simulation_time_length)
-        # simulation.output_heatmap()
+        simulation.output_heatmap()

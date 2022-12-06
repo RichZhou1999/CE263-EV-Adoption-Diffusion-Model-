@@ -27,41 +27,45 @@ def experiment(income_coeff, neighbor_adoption_coeff ):
         "adoption": 0,
         "zipcode": 0,
         "degree": 0,
-        "num_neighbor_adopted": 0
+        "num_neighbor_adopted": 0,
+        "adoption_time": -1
     }
-    attribute_type_dict = {
+    attribute_type_dict ={
         "income": float,
         "adoption": int,
         "zipcode": int,
         "degree": int,
         "num_neighbor_adopted": int,
+        "adoption_time": int
     }
+    path = os.path.join(
+        os.path.dirname(__file__), '..', 'Data', 'wa_pev_weekly_reg.csv'
+    )
+    # print("absolute error", simulation.calculate_absolute_error(path))
+    # simulation.show_adoption_history(path)
 
-    # network initialization
-    G = NetworkCreatorNetworkit(25000)
+
+
+    G = NetworkCreatorNetworkit(30000)
     G.generate_node_attribute_attachment(attribute_dict, attribute_type_dict)
     csv_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'Data', 'BEV_data.csv'))
     G.generate_nodes_from_population_income_csv(csv_path=csv_path)
     G.generate_edge_list(WA_ZIPCODE_COORDINATES_PATH, M_PATH)
     G.generate_edges()
     G.set_node_degree()
-    # simulation_paras = {"income_coeff": 9.75e-6,
-    #                     "neighbor_adoption_coeff": 7.75e-3}
-    simulation_paras = {"income_coeff": income_coeff,
-                        "neighbor_adoption_coeff": neighbor_adoption_coeff}
-    #
-    simulation = Simulation(G, 700, simulation_paras)
+    simulation_paras = {"income_coeff": 9.1e-6,
+                        "neighbor_adoption_coeff": 8.62e-3}
+    simulation_time_length = 611
+    simulation = Simulation(G, simulation_time_length, simulation_paras)
     simulation.run()
-    path = os.path.join(
-        os.path.dirname(__file__), '..', 'Data', 'wa_pev_weekly_reg.csv'
-    )
-    absolute_error = simulation.calculate_absolute_error(path)
-    print("absolute error", absolute_error)
-    return absolute_error
-
-possible_income_coeff = np.linspace(9.83, 9.85, 50)*1e-6
-possible_neighbor_adoption_coeff = np.linspace(7.76, 7.78, 50)*1e-3
-for i in range(100):
+    print("absolute error", simulation.calculate_absolute_error(path))
+    return simulation.calculate_absolute_error(path)
+    # simulation.show_adoption_history(path)
+# 9.1e-6
+# 8.62e-3
+possible_income_coeff = np.linspace(8.9, 9.2, 50)*1e-6
+possible_neighbor_adoption_coeff = np.linspace(8.4, 8.8, 50)*1e-3
+for i in range(10):
     income_coeff = random.choice(possible_income_coeff)
     neighbor_adoption_coeff = random.choice(possible_neighbor_adoption_coeff)
     absolute_error = experiment(income_coeff, neighbor_adoption_coeff)

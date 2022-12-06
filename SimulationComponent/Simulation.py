@@ -74,7 +74,7 @@ class Simulation:
         plt.ylabel("Adoption Number")
 
         x_label_position = [0, 104, 208, 312, 416, 520, 624]
-        labels = [2011, 2013, 2015, 2017, 2019, 2021, 2022]
+        labels = [2011, 2013, 2015, 2017, 2019, 2021, 2023]
         plt.grid(False)
         plt.xticks(x_label_position, labels)
         # locs, labels = plt.xticks()
@@ -128,7 +128,7 @@ class Simulation:
         x = range(len(adoption_sum_list))
         plt.plot(x, y, label='model curve', linestyle='--')
         x_label_position = [0, 104, 208, 312, 416, 520, 624]
-        labels = [2011, 2013, 2015, 2017, 2019, 2021, 2022]
+        labels = [2011, 2013, 2015, 2017, 2019, 2021, 2023]
         plt.grid(False)
         plt.xticks(x_label_position, labels)
         plt.legend()
@@ -206,17 +206,18 @@ if __name__ == "__main__":
     G.generate_edges()
     G.set_node_degree()
 
-    simulation_paras = {"income_coeff": 9.32e-6,
-                        "neighbor_adoption_coeff": 7.15e-3}
-    simulation = Simulation(G, 684, simulation_paras)
+    simulation_paras = {"income_coeff": 9.1e-6,
+                        "neighbor_adoption_coeff": 8.62e-3}
+    simulation_time_length = 860
+    simulation = Simulation(G, simulation_time_length, simulation_paras)
     simulation.run()
     print("absolute error", simulation.calculate_absolute_error(path))
-    # simulation.show_adoption_history(path)
-    ZIPCODE_COORDINATES = pd.read_csv(WA_ZIPCODE_COORDINATES_PATH)
-    city = "Tacoma"
-    print(ZIPCODE_COORDINATES['City'])
-    zipcode_list = ZIPCODE_COORDINATES[ZIPCODE_COORDINATES['City'] ==city]['Zip']
-    zipcode_list = list(zipcode_list)
-    print(zipcode_list)
-
-    simulation.plot_zipcode_adoption_curve(zipcode_list, city)
+    simulation.show_adoption_history(path)
+    # ZIPCODE_COORDINATES = pd.read_csv(WA_ZIPCODE_COORDINATES_PATH)
+    # city = "Tacoma"
+    # print(ZIPCODE_COORDINATES['City'])
+    # zipcode_list = ZIPCODE_COORDINATES[ZIPCODE_COORDINATES['City'] ==city]['Zip']
+    # zipcode_list = list(zipcode_list)
+    # print(zipcode_list)
+    #
+    # simulation.plot_zipcode_adoption_curve(zipcode_list, city)
