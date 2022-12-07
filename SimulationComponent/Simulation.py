@@ -140,6 +140,58 @@ class Simulation:
         plt.title("adoption curve under %s"%city)
         plt.show()
 
+    def output_cumulative_sum_by_zipcode(self, simulation_time_length):
+        # simulation_time_length = simulation_time_length
+        zipcode_dict = {}
+        for node_id in range(self.G.current_node_number):
+            if self.G.node_attributes_attachment['zipcode'][node_id] not in zipcode_dict:
+                zipcode_dict[self.G.node_attributes_attachment['zipcode'][node_id]] = [0] * simulation_time_length
+            if self.G.node_attributes_attachment['adoption'][node_id] == 1:
+                zipcode_dict[self.G.node_attributes_attachment['zipcode'][node_id]][
+                    self.G.node_attributes_attachment["adoption_time"][node_id]] += 1
+            # else:
+            #     zipcode_dict[self.G.node_attributes_attachment['zipcode'][node_id]][self.G.node_attributes_attachment["adoption_time"][node_id]] += 1
+        zipcode_number = len(zipcode_dict.keys())
+        dataframe_length = zipcode_number * (simulation_time_length - 1)
+        array = np.array(np.zeros((dataframe_length, 3)))
+        output_dataframe = pd.DataFrame(array, columns=["zipcode", "week", "number"])
+        temp_index = 0
+        for key in zipcode_dict.keys():
+            temp_sum = 0
+            for i in range(simulation_time_length - 1):
+                temp_sum += zipcode_dict[key][i]
+                output_dataframe.iloc[temp_index] = [key, i, int(temp_sum / self.G.scale)]
+                temp_index += 1
+
+        # output_dataframe.to_csv("../Results/output.csv")
+
+        mypath = os.path.join(
+            os.path.dirname(__file__), '..', 'Results')
+        onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
+        onlyfiles = [f for f in onlyfiles if (".csv" in f) and ("out" in f)]
+        output_dataframe.to_csv("../Results/output_%s.csv" % (len(onlyfiles)))
+
+    def output_weekly_cumulative_adoption(self):
+        adoption_each_step = [0] * self.simulation_time_length
+
+        for node_id in range(self.G.current_node_number):
+            if self.G.node_attributes_attachment['adoption'][node_id] == 1:
+                adoption_each_step[self.G.node_attributes_attachment['adoption_time'][node_id]] += 1
+        temp_sum = 0
+        adoption_sum_list = []
+        for i in range(self.simulation_time_length):
+            temp_sum += adoption_each_step[i]
+            adoption_sum_list.append(temp_sum)
+        adoption_each_step = np.array(adoption_each_step)
+        adoption_sum_list = np.array(adoption_sum_list)
+        week_list = [i for i in range(self.simulation_time_length)]
+        d_each = {'week': week_list, 'number': (adoption_each_step / self.G.scale).astype(int)}
+        d_sum = {'week': week_list, 'number': (adoption_sum_list / self.G.scale).astype(int)}
+
+        each_dataframe = pd.DataFrame(data=d_each)
+        sum_dataframe = pd.DataFrame(data=d_sum)
+        each_dataframe.to_csv("../Results/weekly_adoption_5_percent.csv")
+        sum_dataframe.to_csv("../Results/sum_adoption_5_percent.csv")
 
 if __name__ == "__main__":
 

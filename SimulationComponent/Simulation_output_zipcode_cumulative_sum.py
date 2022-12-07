@@ -14,7 +14,7 @@ from SimulationComponent.Simulation import Simulation
 
 
 if __name__ == "__main__":
-    for i in range(1):
+    for i in range(20):
         WA_ZIPCODE_COORDINATES_PATH = os.path.join(
             os.path.dirname(__file__), '..', 'Data', 'wa_zipcode_coordinates.csv'
         )
@@ -52,8 +52,8 @@ if __name__ == "__main__":
         G.generate_edges()
         G.set_node_degree()
 
-        simulation_paras = {"income_coeff": 9.1e-6,
-                            "neighbor_adoption_coeff": 8.62e-3}
+        simulation_paras = {"income_coeff": 9.28e-6,
+                            "neighbor_adoption_coeff": 8.429e-3}
         #860 5%
         simulation_time_length = 611
         simulation = Simulation(G, simulation_time_length, simulation_paras)
@@ -63,5 +63,5 @@ if __name__ == "__main__":
         #simulation.output_cumulative_sum_by_zipcode(simulation_time_length)
         # simulation.show_adoption_history(path)
         # print("absolute error", simulation.calculate_absolute_error(path))
-        # simulation.output_cumulative_sum_by_zipcode(simulation_time_length)
-        simulation.output_heatmap()
+        simulation.output_cumulative_sum_by_zipcode(simulation_time_length)
+        # simulation.output_heatmap()
