@@ -156,6 +156,7 @@ class NetworkCreatorNetworkit(nk.graph.Graph):
             target = row[1]
             self.addEdge(source, target)
         
+        print(f'number of edges = {len(self.edge_list)}')
         print("DONE!")
     
     def set_node_degree(self):
